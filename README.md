@@ -12,3 +12,5 @@ Okno: 15%
 Funkcjonalność: 3%
 
 Razem około 5%
+
+Jeśli chcesz współtworzyć projekt napisz PW na http://eu07.kolej.org.pl z prośbą o dołączenie do projektu.
