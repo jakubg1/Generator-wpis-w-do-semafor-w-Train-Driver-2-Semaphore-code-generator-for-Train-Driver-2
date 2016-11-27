@@ -1,0 +1,9 @@
+C:\Users\beata\AppData\Local\Temporary Projects\Generator semaforów\bin\Debug\Generator semaforów.exe
+C:\Users\beata\AppData\Local\Temporary Projects\Generator semaforów\bin\Debug\Generator semaforów.pdb
+C:\Users\beata\AppData\Local\Temporary Projects\Generator semaforów\obj\x86\Debug\Generator_semaforów.Properties.Resources.resources
+C:\Users\beata\AppData\Local\Temporary Projects\Generator semaforów\obj\x86\Debug\Generator semaforów.csproj.GenerateResource.Cache
+C:\Users\beata\AppData\Local\Temporary Projects\Generator semaforów\obj\x86\Debug\Generator semaforów.exe
+C:\Users\beata\AppData\Local\Temporary Projects\Generator semaforów\obj\x86\Debug\Generator semaforów.pdb
+C:\Users\beata\AppData\Local\Temporary Projects\Generator semaforów\obj\x86\Debug\Generator_semaforów.okno.resources
+C:\Users\beata\Desktop\GENERATOR SEMAFORÓW\Generator-wpis-w-do-semafor-w-Train-Driver-2-Semaphore-code-generator-for-Train-Driver-2\Generator semaforów\Generator semaforów\obj\x86\Debug\Generator semaforów.exe
+C:\Users\beata\Desktop\GENERATOR SEMAFORÓW\Generator-wpis-w-do-semafor-w-Train-Driver-2-Semaphore-code-generator-for-Train-Driver-2\Generator semaforów\Generator semaforów\obj\x86\Debug\Generator semaforów.pdb
