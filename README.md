@@ -8,3 +8,7 @@ Modyfikujące osoby powinny segregować i komentować na bieżąco wszystkie rze
 Obecny stan prac:
 
 Trwa budowa okna.
+Okno: 15%
+Funkcjonalność: 3%
+
+Razem około 5%
