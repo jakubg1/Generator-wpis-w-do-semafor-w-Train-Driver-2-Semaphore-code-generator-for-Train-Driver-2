@@ -37,7 +37,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.kolpowt = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.osl = new System.Windows.Forms.Panel();
             this.osl1 = new System.Windows.Forms.RadioButton();
             this.osl2 = new System.Windows.Forms.RadioButton();
             this.osl3 = new System.Windows.Forms.RadioButton();
@@ -47,8 +47,16 @@
             this.wskw19 = new System.Windows.Forms.CheckBox();
             this.wskw20 = new System.Windows.Forms.CheckBox();
             this.wskw24 = new System.Windows.Forms.CheckBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.opckarz = new System.Windows.Forms.CheckBox();
+            this.opcuniew = new System.Windows.Forms.CheckBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.kolpowt.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.osl.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -67,6 +75,7 @@
             this.typsem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.typsem.FormattingEnabled = true;
             this.typsem.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.typsem.IntegralHeight = false;
             this.typsem.Items.AddRange(new object[] {
             "Semafor",
             "T. ostrzegawcza",
@@ -144,15 +153,15 @@
             this.kolpowt.Size = new System.Drawing.Size(120, 75);
             this.kolpowt.TabIndex = 10;
             // 
-            // panel2
+            // osl
             // 
-            this.panel2.Controls.Add(this.osl1);
-            this.panel2.Controls.Add(this.osl2);
-            this.panel2.Controls.Add(this.osl3);
-            this.panel2.Location = new System.Drawing.Point(12, 186);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(120, 75);
-            this.panel2.TabIndex = 11;
+            this.osl.Controls.Add(this.osl1);
+            this.osl.Controls.Add(this.osl2);
+            this.osl.Controls.Add(this.osl3);
+            this.osl.Location = new System.Drawing.Point(12, 186);
+            this.osl.Name = "osl";
+            this.osl.Size = new System.Drawing.Size(120, 75);
+            this.osl.TabIndex = 11;
             // 
             // osl1
             // 
@@ -249,6 +258,89 @@
             this.wskw24.UseVisualStyleBackColor = true;
             this.wskw24.CheckedChanged += new System.EventHandler(this.wskw24_CheckedChanged);
             // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label5.Location = new System.Drawing.Point(138, 160);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(120, 20);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Opcje dod.:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // opckarz
+            // 
+            this.opckarz.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.opckarz.Location = new System.Drawing.Point(142, 183);
+            this.opckarz.Name = "opckarz";
+            this.opckarz.Size = new System.Drawing.Size(120, 25);
+            this.opckarz.TabIndex = 19;
+            this.opckarz.Text = "Karzełkowy";
+            this.opckarz.UseVisualStyleBackColor = true;
+            this.opckarz.CheckedChanged += new System.EventHandler(this.opckarz_CheckedChanged);
+            // 
+            // opcuniew
+            // 
+            this.opcuniew.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.opcuniew.Location = new System.Drawing.Point(142, 208);
+            this.opcuniew.Name = "opcuniew";
+            this.opcuniew.Size = new System.Drawing.Size(120, 25);
+            this.opcuniew.TabIndex = 20;
+            this.opcuniew.Text = "Unieważniony";
+            this.opcuniew.UseVisualStyleBackColor = true;
+            this.opcuniew.CheckedChanged += new System.EventHandler(this.opcuniew_CheckedChanged);
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label6.Location = new System.Drawing.Point(264, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(80, 20);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "Komora 1:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label7.Location = new System.Drawing.Point(264, 29);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(80, 20);
+            this.label7.TabIndex = 22;
+            this.label7.Text = "Komora 2:";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label8.Location = new System.Drawing.Point(264, 49);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(80, 20);
+            this.label8.TabIndex = 23;
+            this.label8.Text = "Komora 3:";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label9
+            // 
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label9.Location = new System.Drawing.Point(264, 69);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(80, 20);
+            this.label9.TabIndex = 24;
+            this.label9.Text = "Komora 4:";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label10.Location = new System.Drawing.Point(264, 89);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(80, 20);
+            this.label10.TabIndex = 25;
+            this.label10.Text = "Komora 5:";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // okno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -256,13 +348,21 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Red;
             this.ClientSize = new System.Drawing.Size(864, 267);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.opcuniew);
+            this.Controls.Add(this.opckarz);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.wskw24);
             this.Controls.Add(this.wskw20);
             this.Controls.Add(this.wskw19);
             this.Controls.Add(this.wskw18);
             this.Controls.Add(this.wskw1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.osl);
             this.Controls.Add(this.kolpowt);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -272,8 +372,9 @@
             this.MaximizeBox = false;
             this.Name = "okno";
             this.Text = "Generator wpisów semaforów do TD2 - wersja 3.0.0";
+            this.Load += new System.EventHandler(this.okno_Load);
             this.kolpowt.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
+            this.osl.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -281,23 +382,31 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox typsem;
+        private System.Windows.Forms.Panel kolpowt;
         private System.Windows.Forms.RadioButton kolpowt1;
         private System.Windows.Forms.RadioButton kolpowt2;
         private System.Windows.Forms.RadioButton kolpowt3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel kolpowt;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel osl;
         private System.Windows.Forms.RadioButton osl1;
         private System.Windows.Forms.RadioButton osl2;
         private System.Windows.Forms.RadioButton osl3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox wskw1;
         private System.Windows.Forms.CheckBox wskw18;
         private System.Windows.Forms.CheckBox wskw19;
         private System.Windows.Forms.CheckBox wskw20;
         private System.Windows.Forms.CheckBox wskw24;
+        private System.Windows.Forms.CheckBox opckarz;
+        private System.Windows.Forms.CheckBox opcuniew;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
 
     }
 }

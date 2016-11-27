@@ -61,29 +61,46 @@ namespace Generator_semaforów
 
         private void wskw18_CheckedChanged(object sender, EventArgs e)
         {
-            if (w18 == false) w1 = true;
-            if (w18 == true) w1 = false;
+            if (w18 == false) w18 = true;
+            if (w18 == true) w18 = false;
         }
 
         private void wskw19_CheckedChanged(object sender, EventArgs e)
         {
-            if (w19 == false) w1 = true;
-            if (w19 == true) w1 = false;
+            if (w19 == false) w19 = true;
+            if (w19 == true) w19 = false;
         }
 
         private void wskw20_CheckedChanged(object sender, EventArgs e)
         {
-            if (w20 == false) w1 = true;
-            if (w20 == true) w1 = false;
+            if (w20 == false) w20 = true;
+            if (w20 == true) w20 = false;
         }
 
         private void wskw24_CheckedChanged(object sender, EventArgs e)
         {
-            if (w24 == false) w1 = true;
-            if (w24 == true) w1 = false;
+            if (w24 == false) w24 = true;
+            if (w24 == true) w24 = false;
+        }
+
+        private void opckarz_CheckedChanged(object sender, EventArgs e)
+        {
+            if (karzelk == false) karzelk = true;
+            if (karzelk == true) karzelk = false;
+        }
+
+        private void opcuniew_CheckedChanged(object sender, EventArgs e)
+        {
+            if (uniew == false) uniew = true;
+            if (uniew == true) uniew = false;
         }
 
         // poniżej nieużywane
+
+        private void okno_Load(object sender, EventArgs e)
+        {
+
+        }
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -96,6 +113,16 @@ namespace Generator_semaforów
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }
@@ -131,6 +158,9 @@ namespace Generator_semaforów
         bool w20 = false;
         bool w24 = false;
 
+        // opcje dodatkowe
+        bool karzelk = false;
+        bool uniew = false;
 
         #endregion
     }
