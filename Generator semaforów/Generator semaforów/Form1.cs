@@ -229,7 +229,7 @@ namespace Generator_semaforów
         // wyświetlanie
         private void debugger_Click(object sender, EventArgs e)
         {
-            debug = "Debugowanie:\r\n" + typsemafora;
+            debug = "Debugowanie:\r\ntypsemafora = " + typsemafora + "\r\nkolejnoscpowtarzacza = " + kolejnoscpowtarzacza + "\r\nodchylsemafora = " + odchylsemafora + "\r\nw1 = " + w1 + "\r\nw18 = " + w18 + "\r\nw19 = " + w19 + "\r\nw20 = " + w20 + "\r\nw24 = " + w24 + "\r\nkarzelk = " + karzelk + "\r\nuniew = " + uniew + "\r\nppom = " + ppom + "\r\npziel = " + pziel + "\r\nkomora1 = " + komora1 + "\r\nkomora2 = " + komora2 + "\r\nkomora3 = " + komora3 + "\r\nkomora4 = " + komora4 + "\r\nkomora5 = " + komora5;
             debugger.Text = debug;
         }
 
