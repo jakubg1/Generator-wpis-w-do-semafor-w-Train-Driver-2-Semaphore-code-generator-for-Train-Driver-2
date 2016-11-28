@@ -61,6 +61,9 @@
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.debugger = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.paspomaranczowy = new System.Windows.Forms.CheckBox();
+            this.paszielony = new System.Windows.Forms.CheckBox();
             this.kolpowt.SuspendLayout();
             this.osl.SuspendLayout();
             this.SuspendLayout();
@@ -450,12 +453,45 @@
             // debugger
             // 
             this.debugger.AutoSize = true;
-            this.debugger.Location = new System.Drawing.Point(604, 9);
+            this.debugger.Location = new System.Drawing.Point(836, 7);
             this.debugger.Name = "debugger";
             this.debugger.Size = new System.Drawing.Size(41, 13);
             this.debugger.TabIndex = 31;
             this.debugger.Text = "label11";
             this.debugger.Click += new System.EventHandler(this.debugger_Click);
+            // 
+            // label11
+            // 
+            this.label11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label11.Location = new System.Drawing.Point(264, 173);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(80, 20);
+            this.label11.TabIndex = 32;
+            this.label11.Text = "Pas:";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // paspomaranczowy
+            // 
+            this.paspomaranczowy.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.paspomaranczowy.Location = new System.Drawing.Point(339, 172);
+            this.paspomaranczowy.Name = "paspomaranczowy";
+            this.paspomaranczowy.Size = new System.Drawing.Size(120, 25);
+            this.paspomaranczowy.TabIndex = 33;
+            this.paspomaranczowy.Text = "Pomarańczow.";
+            this.paspomaranczowy.UseVisualStyleBackColor = true;
+            this.paspomaranczowy.CheckedChanged += new System.EventHandler(this.paspomaranczowy_CheckedChanged);
+            // 
+            // paszielony
+            // 
+            this.paszielony.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.paszielony.Location = new System.Drawing.Point(465, 172);
+            this.paszielony.Name = "paszielony";
+            this.paszielony.Size = new System.Drawing.Size(120, 25);
+            this.paszielony.TabIndex = 34;
+            this.paszielony.Text = "Zielony";
+            this.paszielony.UseVisualStyleBackColor = true;
+            this.paszielony.CheckedChanged += new System.EventHandler(this.paszielony_CheckedChanged);
             // 
             // okno
             // 
@@ -463,7 +499,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Red;
-            this.ClientSize = new System.Drawing.Size(864, 269);
+            this.ClientSize = new System.Drawing.Size(1027, 269);
+            this.Controls.Add(this.paszielony);
+            this.Controls.Add(this.paspomaranczowy);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.debugger);
             this.Controls.Add(this.comboBox5);
             this.Controls.Add(this.comboBox4);
@@ -536,6 +575,9 @@
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.Label debugger;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.CheckBox paspomaranczowy;
+        private System.Windows.Forms.CheckBox paszielony;
 
     }
 }

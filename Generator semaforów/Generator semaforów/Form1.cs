@@ -96,6 +96,18 @@ namespace Generator_semaforów
             if (uniew == true) uniew = false;
         }
 
+        private void paspomaranczowy_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ppom == false) ppom = true;
+            if (ppom == true) ppom = false;
+        }
+
+        private void paszielony_CheckedChanged(object sender, EventArgs e)
+        {
+            if (pziel == false) pziel = true;
+            if (pziel == true) pziel = false;
+        }
+
         // nieużywane
         private void okno_Load(object sender, EventArgs e)
         {
@@ -152,6 +164,11 @@ namespace Generator_semaforów
 
         }
 
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
         #endregion
 
         #region liczniki
@@ -186,6 +203,10 @@ namespace Generator_semaforów
         // opcje dodatkowe
         bool karzelk = false;
         bool uniew = false;
+
+        // pasy
+        bool ppom = false;
+        bool pziel = false;
 
         // komory
         // 0 - brak
