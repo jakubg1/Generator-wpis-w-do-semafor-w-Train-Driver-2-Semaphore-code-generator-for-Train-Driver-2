@@ -16,10 +16,35 @@ namespace Generator_semaforów
 
         #region sprawdzanie kontrolek (wciskanie/wybieranie czegoś w oknie)
 
-        // typ semafora
+        // sprawdzanie jaka opcja jest zaznaczona, listy
         private void typsem_SelectedIndexChanged(object sender, EventArgs e)
         {
             typsemafora = typsem.SelectedIndex;
+        }
+
+        private void k1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            komora1 = k1.SelectedIndex;
+        }
+
+        private void k2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            komora2 = k2.SelectedIndex;
+        }
+
+        private void k3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            komora3 = k3.SelectedIndex;
+        }
+
+        private void k4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            komora4 = k4.SelectedIndex;
+        }
+
+        private void k5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            komora5 = k5.SelectedIndex;
         }
 
         // sprawdzanie czy coś jest zaznaczone, radiobuttony

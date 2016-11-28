@@ -55,11 +55,11 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.k1 = new System.Windows.Forms.ComboBox();
+            this.k2 = new System.Windows.Forms.ComboBox();
+            this.k3 = new System.Windows.Forms.ComboBox();
+            this.k4 = new System.Windows.Forms.ComboBox();
+            this.k5 = new System.Windows.Forms.ComboBox();
             this.debugger = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.paspomaranczowy = new System.Windows.Forms.CheckBox();
@@ -355,13 +355,13 @@
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
-            // comboBox1
+            // k1
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.comboBox1.IntegralHeight = false;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.k1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.k1.FormattingEnabled = true;
+            this.k1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.k1.IntegralHeight = false;
+            this.k1.Items.AddRange(new object[] {
             "(brak)",
             "Niebieskie",
             "Zielone",
@@ -369,18 +369,19 @@
             "Pomarańczowe (ogr. prędkości)",
             "Czerwone",
             "Białe"});
-            this.comboBox1.Location = new System.Drawing.Point(339, 7);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(240, 27);
-            this.comboBox1.TabIndex = 26;
+            this.k1.Location = new System.Drawing.Point(339, 7);
+            this.k1.Name = "k1";
+            this.k1.Size = new System.Drawing.Size(240, 27);
+            this.k1.TabIndex = 26;
+            this.k1.SelectedIndexChanged += new System.EventHandler(this.k1_SelectedIndexChanged);
             // 
-            // comboBox2
+            // k2
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.comboBox2.IntegralHeight = false;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.k2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.k2.FormattingEnabled = true;
+            this.k2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.k2.IntegralHeight = false;
+            this.k2.Items.AddRange(new object[] {
             "(brak)",
             "Niebieskie",
             "Zielone",
@@ -388,18 +389,19 @@
             "Pomarańczowe (ogr. prędkości)",
             "Czerwone",
             "Białe"});
-            this.comboBox2.Location = new System.Drawing.Point(339, 40);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(240, 27);
-            this.comboBox2.TabIndex = 27;
+            this.k2.Location = new System.Drawing.Point(339, 40);
+            this.k2.Name = "k2";
+            this.k2.Size = new System.Drawing.Size(240, 27);
+            this.k2.TabIndex = 27;
+            this.k2.SelectedIndexChanged += new System.EventHandler(this.k2_SelectedIndexChanged);
             // 
-            // comboBox3
+            // k3
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.comboBox3.IntegralHeight = false;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.k3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.k3.FormattingEnabled = true;
+            this.k3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.k3.IntegralHeight = false;
+            this.k3.Items.AddRange(new object[] {
             "(brak)",
             "Niebieskie",
             "Zielone",
@@ -407,18 +409,19 @@
             "Pomarańczowe (ogr. prędkości)",
             "Czerwone",
             "Białe"});
-            this.comboBox3.Location = new System.Drawing.Point(339, 73);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(240, 27);
-            this.comboBox3.TabIndex = 28;
+            this.k3.Location = new System.Drawing.Point(339, 73);
+            this.k3.Name = "k3";
+            this.k3.Size = new System.Drawing.Size(240, 27);
+            this.k3.TabIndex = 28;
+            this.k3.SelectedIndexChanged += new System.EventHandler(this.k3_SelectedIndexChanged);
             // 
-            // comboBox4
+            // k4
             // 
-            this.comboBox4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.comboBox4.IntegralHeight = false;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.k4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.k4.FormattingEnabled = true;
+            this.k4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.k4.IntegralHeight = false;
+            this.k4.Items.AddRange(new object[] {
             "(brak)",
             "Niebieskie",
             "Zielone",
@@ -426,18 +429,19 @@
             "Pomarańczowe (ogr. prędkości)",
             "Czerwone",
             "Białe"});
-            this.comboBox4.Location = new System.Drawing.Point(339, 106);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(240, 27);
-            this.comboBox4.TabIndex = 29;
+            this.k4.Location = new System.Drawing.Point(339, 106);
+            this.k4.Name = "k4";
+            this.k4.Size = new System.Drawing.Size(240, 27);
+            this.k4.TabIndex = 29;
+            this.k4.SelectedIndexChanged += new System.EventHandler(this.k4_SelectedIndexChanged);
             // 
-            // comboBox5
+            // k5
             // 
-            this.comboBox5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.comboBox5.IntegralHeight = false;
-            this.comboBox5.Items.AddRange(new object[] {
+            this.k5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.k5.FormattingEnabled = true;
+            this.k5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.k5.IntegralHeight = false;
+            this.k5.Items.AddRange(new object[] {
             "(brak)",
             "Niebieskie",
             "Zielone",
@@ -445,10 +449,11 @@
             "Pomarańczowe (ogr. prędkości)",
             "Czerwone",
             "Białe"});
-            this.comboBox5.Location = new System.Drawing.Point(339, 139);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(240, 27);
-            this.comboBox5.TabIndex = 30;
+            this.k5.Location = new System.Drawing.Point(339, 139);
+            this.k5.Name = "k5";
+            this.k5.Size = new System.Drawing.Size(240, 27);
+            this.k5.TabIndex = 30;
+            this.k5.SelectedIndexChanged += new System.EventHandler(this.k5_SelectedIndexChanged);
             // 
             // debugger
             // 
@@ -499,16 +504,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Red;
-            this.ClientSize = new System.Drawing.Size(1027, 269);
+            this.ClientSize = new System.Drawing.Size(1027, 298);
             this.Controls.Add(this.paszielony);
             this.Controls.Add(this.paspomaranczowy);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.debugger);
-            this.Controls.Add(this.comboBox5);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.k5);
+            this.Controls.Add(this.k4);
+            this.Controls.Add(this.k3);
+            this.Controls.Add(this.k2);
+            this.Controls.Add(this.k1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -569,11 +574,11 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox k1;
+        private System.Windows.Forms.ComboBox k2;
+        private System.Windows.Forms.ComboBox k3;
+        private System.Windows.Forms.ComboBox k4;
+        private System.Windows.Forms.ComboBox k5;
         private System.Windows.Forms.Label debugger;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.CheckBox paspomaranczowy;
