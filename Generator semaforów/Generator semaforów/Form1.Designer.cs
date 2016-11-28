@@ -64,8 +64,18 @@
             this.label11 = new System.Windows.Forms.Label();
             this.paspomaranczowy = new System.Windows.Forms.CheckBox();
             this.paszielony = new System.Windows.Forms.CheckBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.kolpowt.SuspendLayout();
             this.osl.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -369,7 +379,7 @@
             "Pomarańczowe (ogr. prędkości)",
             "Czerwone",
             "Białe"});
-            this.k1.Location = new System.Drawing.Point(339, 7);
+            this.k1.Location = new System.Drawing.Point(359, 7);
             this.k1.Name = "k1";
             this.k1.Size = new System.Drawing.Size(240, 27);
             this.k1.TabIndex = 26;
@@ -389,7 +399,7 @@
             "Pomarańczowe (ogr. prędkości)",
             "Czerwone",
             "Białe"});
-            this.k2.Location = new System.Drawing.Point(339, 40);
+            this.k2.Location = new System.Drawing.Point(359, 40);
             this.k2.Name = "k2";
             this.k2.Size = new System.Drawing.Size(240, 27);
             this.k2.TabIndex = 27;
@@ -409,7 +419,7 @@
             "Pomarańczowe (ogr. prędkości)",
             "Czerwone",
             "Białe"});
-            this.k3.Location = new System.Drawing.Point(339, 73);
+            this.k3.Location = new System.Drawing.Point(359, 73);
             this.k3.Name = "k3";
             this.k3.Size = new System.Drawing.Size(240, 27);
             this.k3.TabIndex = 28;
@@ -429,7 +439,7 @@
             "Pomarańczowe (ogr. prędkości)",
             "Czerwone",
             "Białe"});
-            this.k4.Location = new System.Drawing.Point(339, 106);
+            this.k4.Location = new System.Drawing.Point(359, 106);
             this.k4.Name = "k4";
             this.k4.Size = new System.Drawing.Size(240, 27);
             this.k4.TabIndex = 29;
@@ -449,7 +459,7 @@
             "Pomarańczowe (ogr. prędkości)",
             "Czerwone",
             "Białe"});
-            this.k5.Location = new System.Drawing.Point(339, 139);
+            this.k5.Location = new System.Drawing.Point(359, 139);
             this.k5.Name = "k5";
             this.k5.Size = new System.Drawing.Size(240, 27);
             this.k5.TabIndex = 30;
@@ -470,16 +480,16 @@
             this.label11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label11.Location = new System.Drawing.Point(264, 173);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(80, 20);
+            this.label11.Size = new System.Drawing.Size(89, 20);
             this.label11.TabIndex = 32;
-            this.label11.Text = "Pas:";
+            this.label11.Text = "Pas świetlny:";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // paspomaranczowy
             // 
             this.paspomaranczowy.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.paspomaranczowy.Location = new System.Drawing.Point(339, 172);
+            this.paspomaranczowy.Location = new System.Drawing.Point(359, 173);
             this.paspomaranczowy.Name = "paspomaranczowy";
             this.paspomaranczowy.Size = new System.Drawing.Size(120, 25);
             this.paspomaranczowy.TabIndex = 33;
@@ -490,13 +500,98 @@
             // paszielony
             // 
             this.paszielony.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.paszielony.Location = new System.Drawing.Point(465, 172);
+            this.paszielony.Location = new System.Drawing.Point(479, 173);
             this.paszielony.Name = "paszielony";
             this.paszielony.Size = new System.Drawing.Size(120, 25);
             this.paszielony.TabIndex = 34;
             this.paszielony.Text = "Zielony";
             this.paszielony.UseVisualStyleBackColor = true;
             this.paszielony.CheckedChanged += new System.EventHandler(this.paszielony_CheckedChanged);
+            // 
+            // label12
+            // 
+            this.label12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label12.Location = new System.Drawing.Point(264, 200);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(89, 20);
+            this.label12.TabIndex = 35;
+            this.label12.Text = "Miejsce wst.:";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.radioButton2);
+            this.panel1.Controls.Add(this.radioButton1);
+            this.panel1.Location = new System.Drawing.Point(268, 224);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(94, 62);
+            this.panel1.TabIndex = 36;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.radioButton1.Location = new System.Drawing.Point(3, 3);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(82, 25);
+            this.radioButton1.TabIndex = 6;
+            this.radioButton1.Text = "Notatnik";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.radioButton2.Location = new System.Drawing.Point(3, 34);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(82, 25);
+            this.radioButton2.TabIndex = 7;
+            this.radioButton2.Text = "Edytor";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button1.Location = new System.Drawing.Point(359, 200);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(240, 52);
+            this.button1.TabIndex = 37;
+            this.button1.Text = "Generuj";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(359, 262);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(240, 30);
+            this.textBox1.TabIndex = 38;
+            // 
+            // label13
+            // 
+            this.label13.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label13.Location = new System.Drawing.Point(605, 9);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(89, 20);
+            this.label13.TabIndex = 39;
+            this.label13.Text = "Podgląd:";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label14
+            // 
+            this.label14.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label14.Location = new System.Drawing.Point(700, 9);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(89, 20);
+            this.label14.TabIndex = 40;
+            this.label14.Text = "Sygnały:";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(714, 42);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(60, 251);
+            this.listBox1.TabIndex = 41;
             // 
             // okno
             // 
@@ -505,6 +600,13 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Red;
             this.ClientSize = new System.Drawing.Size(1027, 298);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.paszielony);
             this.Controls.Add(this.paspomaranczowy);
             this.Controls.Add(this.label11);
@@ -541,6 +643,7 @@
             this.Load += new System.EventHandler(this.okno_Load);
             this.kolpowt.ResumeLayout(false);
             this.osl.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -583,6 +686,14 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.CheckBox paspomaranczowy;
         private System.Windows.Forms.CheckBox paszielony;
-
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
