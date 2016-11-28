@@ -53,59 +53,51 @@ namespace Generator_semaforów
             odchylsemafora = 1;
         }
 
+
         // sprawdzanie czy coś jest zaznaczone, checkboxy
         private void wskw1_CheckedChanged(object sender, EventArgs e)
         {
-            if (w1 == false) w1 = true;
-            if (w1 == true) w1 = false;
+            w1 = wskw1.Checked;
         }
 
         private void wskw18_CheckedChanged(object sender, EventArgs e)
         {
-            if (w18 == false) w18 = true;
-            if (w18 == true) w18 = false;
+            w18 = wskw18.Checked;
         }
 
         private void wskw19_CheckedChanged(object sender, EventArgs e)
         {
-            if (w19 == false) w19 = true;
-            if (w19 == true) w19 = false;
+            w19 = wskw19.Checked;
         }
 
         private void wskw20_CheckedChanged(object sender, EventArgs e)
         {
-            if (w20 == false) w20 = true;
-            if (w20 == true) w20 = false;
+            w20 = wskw20.Checked;
         }
 
         private void wskw24_CheckedChanged(object sender, EventArgs e)
         {
-            if (w24 == false) w24 = true;
-            if (w24 == true) w24 = false;
+            w24 = wskw24.Checked;
         }
 
         private void opckarz_CheckedChanged(object sender, EventArgs e)
         {
-            if (karzelk == false) karzelk = true;
-            if (karzelk == true) karzelk = false;
+            karzelk = opckarz.Checked;
         }
 
         private void opcuniew_CheckedChanged(object sender, EventArgs e)
         {
-            if (uniew == false) uniew = true;
-            if (uniew == true) uniew = false;
+            uniew = opcuniew.Checked;
         }
 
         private void paspomaranczowy_CheckedChanged(object sender, EventArgs e)
         {
-            if (ppom == false) ppom = true;
-            if (ppom == true) ppom = false;
+            ppom = paspomaranczowy.Checked;
         }
 
         private void paszielony_CheckedChanged(object sender, EventArgs e)
         {
-            if (pziel == false) pziel = true;
-            if (pziel == true) pziel = false;
+            pziel = paszielony.Checked;
         }
 
         // nieużywane
