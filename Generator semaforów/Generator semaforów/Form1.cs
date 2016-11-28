@@ -5,6 +5,10 @@ namespace Generator_semaforów
 {
     public partial class okno : Form
     {
+
+        // wpisywanie wartości
+        private String debug;
+
         public okno()
         {
             InitializeComponent();
@@ -201,12 +205,10 @@ namespace Generator_semaforów
 
         #region debugowanie
 
-        // wpisywanie wartości
-        String debug = "Debugowanie:\r\n" + typsemafora.ToString();
-
         // wyświetlanie
         private void debugger_Click(object sender, EventArgs e)
         {
+            debug = "Debugowanie:\r\n" + typsemafora;
             debugger.Text = debug;
         }
 
