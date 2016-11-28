@@ -55,6 +55,12 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.debugger = new System.Windows.Forms.Label();
             this.kolpowt.SuspendLayout();
             this.osl.SuspendLayout();
             this.SuspendLayout();
@@ -300,46 +306,156 @@
             this.label6.TabIndex = 21;
             this.label6.Text = "Komora 1:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label7.Location = new System.Drawing.Point(264, 29);
+            this.label7.Location = new System.Drawing.Point(264, 42);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(80, 20);
             this.label7.TabIndex = 22;
             this.label7.Text = "Komora 2:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label8.Location = new System.Drawing.Point(264, 49);
+            this.label8.Location = new System.Drawing.Point(264, 75);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(80, 20);
             this.label8.TabIndex = 23;
             this.label8.Text = "Komora 3:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label9
             // 
             this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label9.Location = new System.Drawing.Point(264, 69);
+            this.label9.Location = new System.Drawing.Point(264, 108);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(80, 20);
             this.label9.TabIndex = 24;
             this.label9.Text = "Komora 4:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label10
             // 
             this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label10.Location = new System.Drawing.Point(264, 89);
+            this.label10.Location = new System.Drawing.Point(264, 142);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(80, 20);
             this.label10.TabIndex = 25;
             this.label10.Text = "Komora 5:";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.comboBox1.IntegralHeight = false;
+            this.comboBox1.Items.AddRange(new object[] {
+            "(brak)",
+            "Niebieskie",
+            "Zielone",
+            "Pomarańczowe (odn. do nast. sem.)",
+            "Pomarańczowe (ogr. prędkości)",
+            "Czerwone",
+            "Białe"});
+            this.comboBox1.Location = new System.Drawing.Point(339, 7);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(240, 27);
+            this.comboBox1.TabIndex = 26;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.comboBox2.IntegralHeight = false;
+            this.comboBox2.Items.AddRange(new object[] {
+            "(brak)",
+            "Niebieskie",
+            "Zielone",
+            "Pomarańczowe (odn. do nast. sem.)",
+            "Pomarańczowe (ogr. prędkości)",
+            "Czerwone",
+            "Białe"});
+            this.comboBox2.Location = new System.Drawing.Point(339, 40);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(240, 27);
+            this.comboBox2.TabIndex = 27;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.comboBox3.IntegralHeight = false;
+            this.comboBox3.Items.AddRange(new object[] {
+            "(brak)",
+            "Niebieskie",
+            "Zielone",
+            "Pomarańczowe (odn. do nast. sem.)",
+            "Pomarańczowe (ogr. prędkości)",
+            "Czerwone",
+            "Białe"});
+            this.comboBox3.Location = new System.Drawing.Point(339, 73);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(240, 27);
+            this.comboBox3.TabIndex = 28;
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.comboBox4.IntegralHeight = false;
+            this.comboBox4.Items.AddRange(new object[] {
+            "(brak)",
+            "Niebieskie",
+            "Zielone",
+            "Pomarańczowe (odn. do nast. sem.)",
+            "Pomarańczowe (ogr. prędkości)",
+            "Czerwone",
+            "Białe"});
+            this.comboBox4.Location = new System.Drawing.Point(339, 106);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(240, 27);
+            this.comboBox4.TabIndex = 29;
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.comboBox5.IntegralHeight = false;
+            this.comboBox5.Items.AddRange(new object[] {
+            "(brak)",
+            "Niebieskie",
+            "Zielone",
+            "Pomarańczowe (odn. do nast. sem.)",
+            "Pomarańczowe (ogr. prędkości)",
+            "Czerwone",
+            "Białe"});
+            this.comboBox5.Location = new System.Drawing.Point(339, 139);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(240, 27);
+            this.comboBox5.TabIndex = 30;
+            // 
+            // debugger
+            // 
+            this.debugger.AutoSize = true;
+            this.debugger.Location = new System.Drawing.Point(604, 9);
+            this.debugger.Name = "debugger";
+            this.debugger.Size = new System.Drawing.Size(41, 13);
+            this.debugger.TabIndex = 31;
+            this.debugger.Text = "label11";
+            this.debugger.Click += new System.EventHandler(this.debugger_Click);
             // 
             // okno
             // 
@@ -347,7 +463,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Red;
-            this.ClientSize = new System.Drawing.Size(864, 267);
+            this.ClientSize = new System.Drawing.Size(864, 269);
+            this.Controls.Add(this.debugger);
+            this.Controls.Add(this.comboBox5);
+            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -376,6 +498,7 @@
             this.kolpowt.ResumeLayout(false);
             this.osl.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -407,6 +530,12 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.Label debugger;
 
     }
 }

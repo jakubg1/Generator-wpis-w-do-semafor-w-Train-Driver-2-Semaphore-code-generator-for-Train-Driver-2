@@ -13,14 +13,12 @@ namespace Generator_semaforów
         #region sprawdzanie kontrolek (wciskanie/wybieranie czegoś w oknie)
 
         // typ semafora
-
         private void typsem_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            typsemafora = typsem.SelectedIndex;
         }
 
         // sprawdzanie czy coś jest zaznaczone, radiobuttony
-
         private void kolpowt1_CheckedChanged(object sender, EventArgs e)
         {
             kolejnoscpowtarzacza = 1;
@@ -52,7 +50,6 @@ namespace Generator_semaforów
         }
 
         // sprawdzanie czy coś jest zaznaczone, checkboxy
-
         private void wskw1_CheckedChanged(object sender, EventArgs e)
         {
             if (w1 == false) w1 = true;
@@ -95,8 +92,7 @@ namespace Generator_semaforów
             if (uniew == true) uniew = false;
         }
 
-        // poniżej nieużywane
-
+        // nieużywane
         private void okno_Load(object sender, EventArgs e)
         {
 
@@ -123,6 +119,31 @@ namespace Generator_semaforów
         }
 
         private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
         {
 
         }
@@ -161,6 +182,33 @@ namespace Generator_semaforów
         // opcje dodatkowe
         bool karzelk = false;
         bool uniew = false;
+
+        // komory
+        // 0 - brak
+        // 1 - niebieska
+        // 2 - zielona
+        // 3 - pomarańczowa - odn. do n. sem.
+        // 4 - pomarańczowa - ograniczenie prędkości
+        // 5 - czerwona
+        // 6 - biała
+        int komora1 = 0;
+        int komora2 = 0;
+        int komora3 = 0;
+        int komora4 = 0;
+        int komora5 = 0;
+
+        #endregion
+
+        #region debugowanie
+
+        // wpisywanie wartości
+        String debug = "Debugowanie:\r\n" + typsemafora.ToString();
+
+        // wyświetlanie
+        private void debugger_Click(object sender, EventArgs e)
+        {
+            debugger.Text = debug;
+        }
 
         #endregion
     }
