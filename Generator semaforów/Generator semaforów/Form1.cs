@@ -50,34 +50,45 @@ namespace Generator_semaforów
         // sprawdzanie czy coś jest zaznaczone, radiobuttony
         private void kolpowt1_CheckedChanged(object sender, EventArgs e)
         {
-            kolejnoscpowtarzacza = 1;
+            if (kolpowt1.Checked == true) kolejnoscpowtarzacza = 0;
+            else if (kolpowt2.Checked == true) kolejnoscpowtarzacza = 1;
+            else kolejnoscpowtarzacza = 2;
         }
 
         private void kolpowt2_CheckedChanged(object sender, EventArgs e)
         {
-            kolejnoscpowtarzacza = 2;
+            if (kolpowt1.Checked == true) kolejnoscpowtarzacza = 0;
+            else if (kolpowt2.Checked == true) kolejnoscpowtarzacza = 1;
+            else kolejnoscpowtarzacza = 2;
         }
 
         private void kolpowt3_CheckedChanged(object sender, EventArgs e)
         {
-            kolejnoscpowtarzacza = 3;
+            if (kolpowt1.Checked == true) kolejnoscpowtarzacza = 0;
+            else if (kolpowt2.Checked == true) kolejnoscpowtarzacza = 1;
+            else kolejnoscpowtarzacza = 2;
         }
 
-        private void odchsl1_CheckedChanged(object sender, EventArgs e)
+        private void osl1_CheckedChanged(object sender, EventArgs e)
         {
-            odchylsemafora = -1;
+            if (osl1.Checked == true) odchylsemafora = 0;
+            else if (osl2.Checked == true) odchylsemafora = 1;
+            else odchylsemafora = 2;
         }
 
-        private void odchsl2_CheckedChanged(object sender, EventArgs e)
+        private void osl2_CheckedChanged(object sender, EventArgs e)
         {
-            odchylsemafora = 0;
+            if (osl1.Checked == true) odchylsemafora = 0;
+            else if (osl2.Checked == true) odchylsemafora = 1;
+            else odchylsemafora = 2;
         }
 
-        private void odchsl3_CheckedChanged(object sender, EventArgs e)
+        private void osl3_CheckedChanged(object sender, EventArgs e)
         {
-            odchylsemafora = 1;
+            if (osl1.Checked == true) odchylsemafora = 0;
+            else if (osl2.Checked == true) odchylsemafora = 1;
+            else odchylsemafora = 2;
         }
-
 
         // sprawdzanie czy coś jest zaznaczone, checkboxy
         private void wskw1_CheckedChanged(object sender, EventArgs e)
@@ -199,16 +210,16 @@ namespace Generator_semaforów
         int typsemafora = 0;
 
         // kolejność powtarzacza
-        // 1 - ISp
-        // 2 - IISp
-        // 3 - IIISp
-        int kolejnoscpowtarzacza = 1;
+        // 0 - ISp
+        // 1 - IISp
+        // 2 - IIISp
+        int kolejnoscpowtarzacza = 0;
 
         // odchylenie semafora
-        // -1 - lewo
-        // 0 - prosto
-        // 1 - prawo
-        int odchylsemafora = -1;
+        // 0 - lewo
+        // 1 - prosto
+        // 2 - prawo
+        int odchylsemafora = 0;
 
         // wskaźniki
         bool w1 = false;
