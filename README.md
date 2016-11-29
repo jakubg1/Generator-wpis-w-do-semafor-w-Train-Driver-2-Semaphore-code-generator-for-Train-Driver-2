@@ -8,9 +8,9 @@ Modyfikujące osoby powinny segregować i komentować na bieżąco wszystkie rze
 Obecny stan prac:
 
 Trwa budowa okna.
-Okno: 35%
-Funkcjonalność: 5%
+Okno: 50%
+Funkcjonalność: 8%
 
-Razem około 10%
+Razem około 15%
 
 Jeśli chcesz współtworzyć projekt napisz PW na http://eu07.kolej.org.pl z prośbą o dołączenie do projektu.
