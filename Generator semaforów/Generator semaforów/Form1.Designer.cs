@@ -66,13 +66,13 @@
             this.paszielony = new System.Windows.Forms.CheckBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.wstedyt = new System.Windows.Forms.RadioButton();
+            this.wstnot = new System.Windows.Forms.RadioButton();
+            this.generuj = new System.Windows.Forms.Button();
+            this.polekodu = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.sygnalywysw = new System.Windows.Forms.ListBox();
             this.kolpowt.SuspendLayout();
             this.osl.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -517,53 +517,58 @@
             this.label12.TabIndex = 35;
             this.label12.Text = "Miejsce wst.:";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.radioButton2);
-            this.panel1.Controls.Add(this.radioButton1);
+            this.panel1.Controls.Add(this.wstedyt);
+            this.panel1.Controls.Add(this.wstnot);
             this.panel1.Location = new System.Drawing.Point(268, 224);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(94, 62);
+            this.panel1.Size = new System.Drawing.Size(82, 50);
             this.panel1.TabIndex = 36;
             // 
-            // radioButton1
+            // wstedyt
             // 
-            this.radioButton1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.radioButton1.Location = new System.Drawing.Point(3, 3);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(82, 25);
-            this.radioButton1.TabIndex = 6;
-            this.radioButton1.Text = "Notatnik";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.wstedyt.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.wstedyt.Location = new System.Drawing.Point(0, 25);
+            this.wstedyt.Name = "wstedyt";
+            this.wstedyt.Size = new System.Drawing.Size(82, 25);
+            this.wstedyt.TabIndex = 7;
+            this.wstedyt.Text = "Edytor";
+            this.wstedyt.UseVisualStyleBackColor = true;
+            this.wstedyt.CheckedChanged += new System.EventHandler(this.wstedyt_CheckedChanged);
             // 
-            // radioButton2
+            // wstnot
             // 
-            this.radioButton2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.radioButton2.Location = new System.Drawing.Point(3, 34);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(82, 25);
-            this.radioButton2.TabIndex = 7;
-            this.radioButton2.Text = "Edytor";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.wstnot.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.wstnot.Location = new System.Drawing.Point(0, 0);
+            this.wstnot.Name = "wstnot";
+            this.wstnot.Size = new System.Drawing.Size(82, 25);
+            this.wstnot.TabIndex = 6;
+            this.wstnot.Text = "Notatnik";
+            this.wstnot.UseVisualStyleBackColor = true;
+            this.wstnot.CheckedChanged += new System.EventHandler(this.wstnot_CheckedChanged);
             // 
-            // button1
+            // generuj
             // 
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.Location = new System.Drawing.Point(359, 200);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(240, 52);
-            this.button1.TabIndex = 37;
-            this.button1.Text = "Generuj";
-            this.button1.UseVisualStyleBackColor = true;
+            this.generuj.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.generuj.Location = new System.Drawing.Point(359, 200);
+            this.generuj.Name = "generuj";
+            this.generuj.Size = new System.Drawing.Size(240, 52);
+            this.generuj.TabIndex = 37;
+            this.generuj.Text = "Generuj";
+            this.generuj.UseVisualStyleBackColor = true;
+            this.generuj.Click += new System.EventHandler(this.generuj_Click);
             // 
-            // textBox1
+            // polekodu
             // 
-            this.textBox1.Location = new System.Drawing.Point(359, 262);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(240, 30);
-            this.textBox1.TabIndex = 38;
+            this.polekodu.Location = new System.Drawing.Point(359, 262);
+            this.polekodu.Multiline = true;
+            this.polekodu.Name = "polekodu";
+            this.polekodu.Size = new System.Drawing.Size(240, 30);
+            this.polekodu.TabIndex = 38;
+            this.polekodu.TextChanged += new System.EventHandler(this.polekodu_TextChanged);
             // 
             // label13
             // 
@@ -574,6 +579,7 @@
             this.label13.TabIndex = 39;
             this.label13.Text = "Podgląd:";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // label14
             // 
@@ -584,14 +590,16 @@
             this.label14.TabIndex = 40;
             this.label14.Text = "Sygnały:";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
-            // listBox1
+            // sygnalywysw
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(714, 42);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(60, 251);
-            this.listBox1.TabIndex = 41;
+            this.sygnalywysw.FormattingEnabled = true;
+            this.sygnalywysw.Location = new System.Drawing.Point(714, 42);
+            this.sygnalywysw.Name = "sygnalywysw";
+            this.sygnalywysw.Size = new System.Drawing.Size(60, 251);
+            this.sygnalywysw.TabIndex = 41;
+            this.sygnalywysw.SelectedIndexChanged += new System.EventHandler(this.sygnalywysw_SelectedIndexChanged);
             // 
             // okno
             // 
@@ -600,11 +608,11 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Red;
             this.ClientSize = new System.Drawing.Size(1027, 298);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.sygnalywysw);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.polekodu);
+            this.Controls.Add(this.generuj);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.paszielony);
@@ -688,12 +696,12 @@
         private System.Windows.Forms.CheckBox paszielony;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.RadioButton wstedyt;
+        private System.Windows.Forms.RadioButton wstnot;
+        private System.Windows.Forms.Button generuj;
+        private System.Windows.Forms.TextBox polekodu;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox sygnalywysw;
     }
 }

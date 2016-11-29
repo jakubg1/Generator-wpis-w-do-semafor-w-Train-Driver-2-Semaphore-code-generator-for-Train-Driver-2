@@ -90,6 +90,18 @@ namespace Generator_semaforów
             else odchylsemafora = 2;
         }
 
+        private void wstnot_CheckedChanged(object sender, EventArgs e)
+        {
+            if (wstnot.Checked == true) wst = 0;
+            else wst = 1;
+        }
+
+        private void wstedyt_CheckedChanged(object sender, EventArgs e)
+        {
+            if (wstnot.Checked == true) wst = 0;
+            else wst = 1;
+        }
+
         // sprawdzanie czy coś jest zaznaczone, checkboxy
         private void wskw1_CheckedChanged(object sender, EventArgs e)
         {
@@ -134,6 +146,18 @@ namespace Generator_semaforów
         private void paszielony_CheckedChanged(object sender, EventArgs e)
         {
             pziel = paszielony.Checked;
+        }
+
+        // generowanie kodu
+        private void generuj_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        // wyświetlanie możliwych sygnałów przez semafor
+        private void sygnalywysw_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
         // nieużywane
@@ -197,6 +221,25 @@ namespace Generator_semaforów
 
         }
 
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void polekodu_TextChanged(object sender, EventArgs e)
+        {
+
+        }
         #endregion
 
         #region liczniki
@@ -220,6 +263,11 @@ namespace Generator_semaforów
         // 1 - prosto
         // 2 - prawo
         int odchylsemafora = 0;
+
+        // miejsce wstawienia kodu
+        // 0 - notatnik
+        // 1 - edytor
+        int wst = 0;
 
         // wskaźniki
         bool w1 = false;
@@ -257,7 +305,7 @@ namespace Generator_semaforów
         // wyświetlanie
         private void debugger_Click(object sender, EventArgs e)
         {
-            debug = "Debugowanie:\r\ntypsemafora = " + typsemafora + "\r\nkolejnoscpowtarzacza = " + kolejnoscpowtarzacza + "\r\nodchylsemafora = " + odchylsemafora + "\r\nw1 = " + w1 + "\r\nw18 = " + w18 + "\r\nw19 = " + w19 + "\r\nw20 = " + w20 + "\r\nw24 = " + w24 + "\r\nkarzelk = " + karzelk + "\r\nuniew = " + uniew + "\r\nppom = " + ppom + "\r\npziel = " + pziel + "\r\nkomora1 = " + komora1 + "\r\nkomora2 = " + komora2 + "\r\nkomora3 = " + komora3 + "\r\nkomora4 = " + komora4 + "\r\nkomora5 = " + komora5;
+            debug = "Debugowanie:\r\ntypsemafora = " + typsemafora + "\r\nkolejnoscpowtarzacza = " + kolejnoscpowtarzacza + "\r\nodchylsemafora = " + odchylsemafora + "\r\nwst = " + wst + "\r\nw1 = " + w1 + "\r\nw18 = " + w18 + "\r\nw19 = " + w19 + "\r\nw20 = " + w20 + "\r\nw24 = " + w24 + "\r\nkarzelk = " + karzelk + "\r\nuniew = " + uniew + "\r\nppom = " + ppom + "\r\npziel = " + pziel + "\r\nkomora1 = " + komora1 + "\r\nkomora2 = " + komora2 + "\r\nkomora3 = " + komora3 + "\r\nkomora4 = " + komora4 + "\r\nkomora5 = " + komora5;
             debugger.Text = debug;
         }
 
