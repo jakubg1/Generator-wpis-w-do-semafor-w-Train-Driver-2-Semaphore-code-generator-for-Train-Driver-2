@@ -3,13 +3,13 @@ using System.Windows.Forms;
 
 namespace Generator_semaforów
 {
-    public partial class okno : Form
+    public partial class Okno : Form
     {
 
         // wpisywanie wartości
         private String debug;
 
-        public okno()
+        public Okno()
         {
             InitializeComponent();
         }
@@ -19,139 +19,133 @@ namespace Generator_semaforów
         // sprawdzanie jaka opcja jest zaznaczona, listy
         private void typsem_SelectedIndexChanged(object sender, EventArgs e)
         {
-            typsemafora = typsem.SelectedIndex;
+            typsemafora = TextBoxTypSemafora.SelectedIndex;
         }
 
         private void k1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            komora1 = k1.SelectedIndex;
+            komora1 = TextBoxKomora1.SelectedIndex;
         }
 
         private void k2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            komora2 = k2.SelectedIndex;
+            komora2 = TextBoxKomora2.SelectedIndex;
         }
 
         private void k3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            komora3 = k3.SelectedIndex;
+            komora3 = TextBoxKomora3.SelectedIndex;
         }
 
         private void k4_SelectedIndexChanged(object sender, EventArgs e)
         {
-            komora4 = k4.SelectedIndex;
+            komora4 = TextBoxKomora4.SelectedIndex;
         }
 
         private void k5_SelectedIndexChanged(object sender, EventArgs e)
         {
-            komora5 = k5.SelectedIndex;
+            komora5 = TextBoxKomora5.SelectedIndex;
         }
 
         // sprawdzanie czy coś jest zaznaczone, radiobuttony
         private void kolpowt1_CheckedChanged(object sender, EventArgs e)
         {
-            if (kolpowt1.Checked == true) kolejnoscpowtarzacza = 0;
-            else if (kolpowt2.Checked == true) kolejnoscpowtarzacza = 1;
+            if (KolejnoscPowtarzacza1.Checked == true) kolejnoscpowtarzacza = 0;
+            else if (KolejnoscPowtarzacza2.Checked == true) kolejnoscpowtarzacza = 1;
             else kolejnoscpowtarzacza = 2;
         }
 
         private void kolpowt2_CheckedChanged(object sender, EventArgs e)
         {
-            if (kolpowt1.Checked == true) kolejnoscpowtarzacza = 0;
-            else if (kolpowt2.Checked == true) kolejnoscpowtarzacza = 1;
+            if (KolejnoscPowtarzacza1.Checked == true) kolejnoscpowtarzacza = 0;
+            else if (KolejnoscPowtarzacza2.Checked == true) kolejnoscpowtarzacza = 1;
             else kolejnoscpowtarzacza = 2;
         }
 
         private void kolpowt3_CheckedChanged(object sender, EventArgs e)
         {
-            if (kolpowt1.Checked == true) kolejnoscpowtarzacza = 0;
-            else if (kolpowt2.Checked == true) kolejnoscpowtarzacza = 1;
+            if (KolejnoscPowtarzacza1.Checked == true) kolejnoscpowtarzacza = 0;
+            else if (KolejnoscPowtarzacza2.Checked == true) kolejnoscpowtarzacza = 1;
             else kolejnoscpowtarzacza = 2;
         }
 
         private void osl1_CheckedChanged(object sender, EventArgs e)
         {
-            if (osl1.Checked == true) odchylsemafora = 0;
-            else if (osl2.Checked == true) odchylsemafora = 1;
+            if (OdchylenieSlupa1.Checked == true) odchylsemafora = 0;
+            else if (OdchylenieSlupa2.Checked == true) odchylsemafora = 1;
             else odchylsemafora = 2;
         }
 
         private void osl2_CheckedChanged(object sender, EventArgs e)
         {
-            if (osl1.Checked == true) odchylsemafora = 0;
-            else if (osl2.Checked == true) odchylsemafora = 1;
+            if (OdchylenieSlupa1.Checked == true) odchylsemafora = 0;
+            else if (OdchylenieSlupa2.Checked == true) odchylsemafora = 1;
             else odchylsemafora = 2;
         }
 
         private void osl3_CheckedChanged(object sender, EventArgs e)
         {
-            if (osl1.Checked == true) odchylsemafora = 0;
-            else if (osl2.Checked == true) odchylsemafora = 1;
+            if (OdchylenieSlupa1.Checked == true) odchylsemafora = 0;
+            else if (OdchylenieSlupa2.Checked == true) odchylsemafora = 1;
             else odchylsemafora = 2;
         }
 
         private void wstnot_CheckedChanged(object sender, EventArgs e)
         {
-            if (wstnot.Checked == true) wst = 0;
+            if (WstawianieNotatnik.Checked == true) wst = 0;
             else wst = 1;
         }
 
         private void wstedyt_CheckedChanged(object sender, EventArgs e)
         {
-            if (wstnot.Checked == true) wst = 0;
+            if (WstawianieNotatnik.Checked == true) wst = 0;
             else wst = 1;
         }
 
         // sprawdzanie czy coś jest zaznaczone, checkboxy
         private void wskw1_CheckedChanged(object sender, EventArgs e)
         {
-            w1 = wskw1.Checked;
+            w1 = WskaznikW1.Checked;
         }
 
         private void wskw18_CheckedChanged(object sender, EventArgs e)
         {
-            w18 = wskw18.Checked;
+            w18 = WskaznikW18.Checked;
         }
 
         private void wskw19_CheckedChanged(object sender, EventArgs e)
         {
-            w19 = wskw19.Checked;
+            w19 = WskaznikW19.Checked;
         }
 
         private void wskw20_CheckedChanged(object sender, EventArgs e)
         {
-            w20 = wskw20.Checked;
+            w20 = WskaznikW20.Checked;
         }
 
         private void wskw24_CheckedChanged(object sender, EventArgs e)
         {
-            w24 = wskw24.Checked;
+            w24 = WskaznikW24.Checked;
         }
 
         private void opckarz_CheckedChanged(object sender, EventArgs e)
         {
-            karzelk = opckarz.Checked;
+            karzelk = OpcjonalnyKarzelkowy.Checked;
         }
 
         private void opcuniew_CheckedChanged(object sender, EventArgs e)
         {
-            uniew = opcuniew.Checked;
+            uniew = OpcjonalnyUniewazniony.Checked;
         }
 
         private void paspomaranczowy_CheckedChanged(object sender, EventArgs e)
         {
-            ppom = paspomaranczowy.Checked;
+            ppom = PasPomaranczowy.Checked;
         }
 
         private void paszielony_CheckedChanged(object sender, EventArgs e)
         {
-            pziel = paszielony.Checked;
-        }
-
-        // generowanie kodu
-        private void generuj_Click(object sender, EventArgs e)
-        {
-
+            pziel = PasZielony.Checked;
         }
 
         // wyświetlanie możliwych sygnałów przez semafor
@@ -310,5 +304,6 @@ namespace Generator_semaforów
         }
 
         #endregion
+
     }
 }

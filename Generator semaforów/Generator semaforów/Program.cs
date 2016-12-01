@@ -15,7 +15,7 @@ namespace Generator_semaforów
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new okno());
+            Application.Run(new Okno());
         }
     }
 }
