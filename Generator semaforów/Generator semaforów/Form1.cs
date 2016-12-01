@@ -75,6 +75,7 @@ namespace Generator_semaforów
 
         #endregion
 
+        #region konstruktor - przypisanie startowych wartosci licznikom i zmiennym
         public Okno()
         {
 
@@ -105,6 +106,7 @@ namespace Generator_semaforów
 
             InitializeComponent();
         }
+        #endregion
 
         #region sprawdzanie kontrolek (wciskanie/wybieranie czegoś w oknie)
 
