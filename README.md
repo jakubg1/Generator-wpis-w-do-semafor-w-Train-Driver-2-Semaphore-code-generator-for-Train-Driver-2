@@ -7,10 +7,10 @@ Info techniczne:
 Modyfikujące osoby powinny segregować i komentować na bieżąco wszystkie rzeczy.
 Obecny stan prac:
 
-Trwa budowa okna.
-Okno: 50%
-Funkcjonalność: 8%
+Trwa budowa kolejnych kawałków kodu.
+Okno: 100%
+Funkcjonalność: 15%
 
-Razem około 15%
+Razem około 25%
 
 Jeśli chcesz współtworzyć projekt napisz PW na http://eu07.kolej.org.pl z prośbą o dołączenie do projektu.
