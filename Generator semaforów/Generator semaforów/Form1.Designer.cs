@@ -352,7 +352,7 @@
             // labelKomora4
             // 
             this.labelKomora4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelKomora4.Location = new System.Drawing.Point(284, 88);
+            this.labelKomora4.Location = new System.Drawing.Point(284, 90);
             this.labelKomora4.Name = "labelKomora4";
             this.labelKomora4.Size = new System.Drawing.Size(80, 20);
             this.labelKomora4.TabIndex = 24;
@@ -362,7 +362,7 @@
             // labelKomora5
             // 
             this.labelKomora5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelKomora5.Location = new System.Drawing.Point(284, 113);
+            this.labelKomora5.Location = new System.Drawing.Point(284, 115);
             this.labelKomora5.Name = "labelKomora5";
             this.labelKomora5.Size = new System.Drawing.Size(80, 20);
             this.labelKomora5.TabIndex = 25;
@@ -443,7 +443,7 @@
             "Pomarańczowe (ogr. prędkości)",
             "Czerwone",
             "Białe"});
-            this.TextBoxKomora4.Location = new System.Drawing.Point(370, 86);
+            this.TextBoxKomora4.Location = new System.Drawing.Point(370, 88);
             this.TextBoxKomora4.Name = "TextBoxKomora4";
             this.TextBoxKomora4.Size = new System.Drawing.Size(240, 27);
             this.TextBoxKomora4.TabIndex = 29;
@@ -463,7 +463,7 @@
             "Pomarańczowe (ogr. prędkości)",
             "Czerwone",
             "Białe"});
-            this.TextBoxKomora5.Location = new System.Drawing.Point(370, 111);
+            this.TextBoxKomora5.Location = new System.Drawing.Point(370, 113);
             this.TextBoxKomora5.Name = "TextBoxKomora5";
             this.TextBoxKomora5.Size = new System.Drawing.Size(240, 27);
             this.TextBoxKomora5.TabIndex = 30;
@@ -482,7 +482,7 @@
             // labelPasSwietlny
             // 
             this.labelPasSwietlny.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelPasSwietlny.Location = new System.Drawing.Point(284, 145);
+            this.labelPasSwietlny.Location = new System.Drawing.Point(284, 147);
             this.labelPasSwietlny.Name = "labelPasSwietlny";
             this.labelPasSwietlny.Size = new System.Drawing.Size(89, 20);
             this.labelPasSwietlny.TabIndex = 32;
@@ -492,7 +492,7 @@
             // PasPomaranczowy
             // 
             this.PasPomaranczowy.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.PasPomaranczowy.Location = new System.Drawing.Point(370, 144);
+            this.PasPomaranczowy.Location = new System.Drawing.Point(370, 146);
             this.PasPomaranczowy.Name = "PasPomaranczowy";
             this.PasPomaranczowy.Size = new System.Drawing.Size(132, 25);
             this.PasPomaranczowy.TabIndex = 33;
@@ -503,7 +503,7 @@
             // PasZielony
             // 
             this.PasZielony.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.PasZielony.Location = new System.Drawing.Point(508, 144);
+            this.PasZielony.Location = new System.Drawing.Point(508, 146);
             this.PasZielony.Name = "PasZielony";
             this.PasZielony.Size = new System.Drawing.Size(102, 25);
             this.PasZielony.TabIndex = 34;
@@ -514,7 +514,7 @@
             // label12
             // 
             this.label12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label12.Location = new System.Drawing.Point(284, 189);
+            this.label12.Location = new System.Drawing.Point(284, 191);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(89, 20);
             this.label12.TabIndex = 35;
@@ -525,7 +525,7 @@
             // 
             this.RadioGroupMiejsceWstawiania.Controls.Add(this.WstawianieEdytor);
             this.RadioGroupMiejsceWstawiania.Controls.Add(this.WstawianieNotatnik);
-            this.RadioGroupMiejsceWstawiania.Location = new System.Drawing.Point(284, 212);
+            this.RadioGroupMiejsceWstawiania.Location = new System.Drawing.Point(284, 214);
             this.RadioGroupMiejsceWstawiania.Name = "RadioGroupMiejsceWstawiania";
             this.RadioGroupMiejsceWstawiania.Size = new System.Drawing.Size(96, 63);
             this.RadioGroupMiejsceWstawiania.TabIndex = 36;
@@ -555,16 +555,17 @@
             // Generuj
             // 
             this.Generuj.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Generuj.Location = new System.Drawing.Point(370, 197);
+            this.Generuj.Location = new System.Drawing.Point(370, 199);
             this.Generuj.Name = "Generuj";
             this.Generuj.Size = new System.Drawing.Size(240, 52);
             this.Generuj.TabIndex = 37;
             this.Generuj.Text = "Generuj";
             this.Generuj.UseVisualStyleBackColor = true;
+            this.Generuj.Click += new System.EventHandler(this.Generuj_Click);
             // 
             // PoleKodu
             // 
-            this.PoleKodu.Location = new System.Drawing.Point(370, 285);
+            this.PoleKodu.Location = new System.Drawing.Point(370, 287);
             this.PoleKodu.Multiline = true;
             this.PoleKodu.Name = "PoleKodu";
             this.PoleKodu.Size = new System.Drawing.Size(240, 30);
@@ -705,6 +706,7 @@
             this.Konfiguruj.TabIndex = 51;
             this.Konfiguruj.Text = "Konfiguruj";
             this.Konfiguruj.UseVisualStyleBackColor = true;
+            this.Konfiguruj.Click += new System.EventHandler(this.Konfiguruj_Click);
             // 
             // Okno
             // 

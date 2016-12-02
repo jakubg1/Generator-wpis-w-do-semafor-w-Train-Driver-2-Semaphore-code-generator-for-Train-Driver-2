@@ -285,6 +285,24 @@ namespace Generator_semaforów
         }
         #endregion
 
+        #region generowanie kodu
+
+        private void Generuj_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        #endregion
+
+        #region automatyczne konfigurowanie komór
+
+        private void Konfiguruj_Click(object sender, EventArgs e)
+        {
+            if (predkosc40 == false) if (predkosc60 == false) if (predkosc100 == false) if (predkosc40na60 == false) if (predkosc100naVmax == false) if (komoraBiala == false) ;
+        }
+
+        #endregion
+
         #region debugowanie
 
         // wyświetlanie
@@ -309,8 +327,9 @@ namespace Generator_semaforów
                     "\r\nkomora4 = " + komora4 +
                     "\r\nkomora5 = " + komora5 +
                     "\r\npredkosc40 = " + predkosc40 +
-                    "\r\nredkosc60 = " + predkosc100 +
-                    "\r\nredkosc40na60 = " + predkosc40na60 +
+                    "\r\npredkosc60 = " + predkosc60 +
+                    "\r\npredkosc100 = " + predkosc100 +
+                    "\r\npredkosc40na60 = " + predkosc40na60 +
                     "\r\npredkosc100naVmax = " + predkosc100naVmax +
                     "\r\nkomoraBiala = " + komoraBiala;
             debugger.Text = debug;
