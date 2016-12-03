@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Generator_semaforów
@@ -103,7 +104,7 @@ namespace Generator_semaforów
             predkosc40na60 = false;
             predkosc100naVmax = false;
             komoraBiala = false;
-
+           
             InitializeComponent();
 
             TextBoxTypSemafora.SelectedIndex = TextBoxTypSemafora.FindStringExact("Semafor");
@@ -112,6 +113,8 @@ namespace Generator_semaforów
             TextBoxKomora3.SelectedIndex = TextBoxKomora3.FindStringExact("(brak)");
             TextBoxKomora4.SelectedIndex = TextBoxKomora4.FindStringExact("(brak)");
             TextBoxKomora5.SelectedIndex = TextBoxKomora5.FindStringExact("(brak)");
+
+            
         }
         #endregion
 
@@ -340,8 +343,83 @@ namespace Generator_semaforów
                     "\r\npredkosc100naVmax = " + predkosc100naVmax +
                     "\r\nkomoraBiala = " + komoraBiala;
             debugger.Text = debug;
+            
         }
 
         #endregion
+
+        #region rysowanie semaforu
+
+        private void rysujSemafor(byte typ, byte komora1, byte komora2, byte komora3, byte komora4, byte komora5)
+        {
+            int startX = 25,
+                startY = 325,
+                width = 100,
+                height = 200;
+
+
+            Graphics kartka = CreateGraphics();
+            SolidBrush pedzel = new SolidBrush(Color.White);
+            Pen kredka = new Pen(Color.DarkBlue);
+
+            //rysowanie bialego pola
+            kartka.DrawRectangle(kredka, startX, startY, width, height);
+            kartka.FillRectangle(pedzel, startX, startY, width, height);
+            //rysowanie słupa
+            int steps = 10;
+            int widthScale = 4;
+            int heightScale = height/(steps + 1);
+
+            kredka = new Pen(Color.Black);
+            for (int i = 1; i <= steps; i++)
+            {
+                if (i%2 == 1)
+                {
+                    pedzel = new SolidBrush(Color.White);
+                }
+                else
+                {
+                    pedzel = new SolidBrush(Color.Red);
+                }
+                kartka.DrawRectangle(kredka, width /2 , startY + (i * heightScale), widthScale, heightScale);
+                kartka.FillRectangle(pedzel, width / 2 + 1, startY + (i * heightScale) - 1, widthScale, heightScale);
+            }
+
+            //generowanie losowego koloru dla testow, potem zmienimy na te z parametrow przekazanych do metody
+            Random randomGen = new Random();
+            KnownColor[] names = (KnownColor[])Enum.GetValues(typeof(KnownColor));
+            KnownColor randomColorName = names[randomGen.Next(names.Length)];
+            Color randomColor = Color.FromKnownColor(randomColorName);
+
+            kredka = new Pen(Color.Black);
+            pedzel = new SolidBrush(Color.Black);
+
+            //obudowa komór
+            kartka.DrawRectangle(kredka, width / 2 + 5, startY  +  heightScale, 20, 75);
+            kartka.FillRectangle(pedzel, width / 2 + 5, startY + heightScale, 20, 75);
+
+            //rysowanie komór :)
+            for (int i = 1; i < 5; i++)
+            {
+                randomGen.Next();
+                randomColorName = names[randomGen.Next(names.Length)];
+                randomColor = Color.FromKnownColor(randomColorName);
+
+                pedzel = new SolidBrush(randomColor);
+
+                kartka.DrawEllipse(kredka, width / 2 + 8, startY + (i * heightScale) + 2, 15, 15);
+                kartka.FillEllipse(pedzel, width / 2 + 8, startY + (i * heightScale) + 2, 15, 15);
+            }
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            rysujSemafor(0, 0, 0, 0, 0, 0);
+        }
+
+        #endregion
+
+
     }
 }
