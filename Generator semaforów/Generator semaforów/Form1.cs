@@ -105,6 +105,13 @@ namespace Generator_semaforów
             komoraBiala = false;
 
             InitializeComponent();
+
+            TextBoxTypSemafora.SelectedIndex = TextBoxTypSemafora.FindStringExact("Semafor");
+            TextBoxKomora1.SelectedIndex = TextBoxKomora1.FindStringExact("(brak)");
+            TextBoxKomora2.SelectedIndex = TextBoxKomora2.FindStringExact("(brak)");
+            TextBoxKomora3.SelectedIndex = TextBoxKomora3.FindStringExact("(brak)");
+            TextBoxKomora4.SelectedIndex = TextBoxKomora4.FindStringExact("(brak)");
+            TextBoxKomora5.SelectedIndex = TextBoxKomora5.FindStringExact("(brak)");
         }
         #endregion
 
