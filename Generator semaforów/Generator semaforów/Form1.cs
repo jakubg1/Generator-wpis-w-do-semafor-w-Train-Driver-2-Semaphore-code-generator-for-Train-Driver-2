@@ -27,6 +27,7 @@ namespace Generator_semaforów
         private int kolejnoscpowtarzacza;
 
         // odchylenie semafora
+        // -1 - semafor karzełkowy
         // 0 - lewo
         // 1 - prosto
         // 2 - prawo
@@ -45,7 +46,6 @@ namespace Generator_semaforów
         private bool w24;
 
         // opcje dodatkowe
-        private bool karzelk;
         private bool uniew;
 
         // pasy
@@ -66,6 +66,9 @@ namespace Generator_semaforów
         private int komora4;
         private int komora5;
 
+        // ilość komór
+        private int ilosckomor;
+
         //predkosci na semaforach
         private bool predkosc40;
         private bool predkosc60;
@@ -73,6 +76,9 @@ namespace Generator_semaforów
         private bool predkosc40na60;
         private bool predkosc100naVmax;
         private bool komoraBiala;
+
+        // zmienna przechowująca kod
+        private string kod;
 
         #endregion
 
@@ -89,7 +95,6 @@ namespace Generator_semaforów
             w19 = false;
             w20 = false;
             w24 = false;
-            karzelk = false;
             uniew = false;
             ppom = false;
             pziel = false;
@@ -104,6 +109,7 @@ namespace Generator_semaforów
             predkosc40na60 = false;
             predkosc100naVmax = false;
             komoraBiala = false;
+            kod = "";
            
             InitializeComponent();
 
@@ -234,7 +240,7 @@ namespace Generator_semaforów
 
         private void OpcjonalnyKarzeklowy_CheckedChanged(object sender, EventArgs e)
         {
-            karzelk = OpcjonalnyKarzelkowy.Checked;
+            odchylsemafora = -1;
         }
 
         private void OpcjonalnyUniewazniony_CheckedChanged(object sender, EventArgs e)
@@ -299,7 +305,112 @@ namespace Generator_semaforów
 
         private void Generuj_Click(object sender, EventArgs e)
         {
-
+            // czyszczenie "cache"
+            kod = "";
+            // ustalanie ilości komór
+            if (komora1 > 0)
+                ilosckomor = 5;
+            else if (komora2 > 0)
+                ilosckomor = 4;
+            else if (komora3 > 0)
+                ilosckomor = 3;
+            else if (komora4 > 0)
+                ilosckomor = 2;
+            else if (komora5 > 0)
+                ilosckomor = 1;
+            else
+                ilosckomor = 0;
+            // GENEROWANIE
+            // jeśli wybrano wpis do notatnika, to dodatkowo zostanie dodany wpis "dynamic_xx"
+            {
+                if (wst == 0)
+                {
+                    if (typsemafora == 0)
+                        kod += "dynamic_rs";
+                    else if (typsemafora == 1)
+                        kod += "dynamic_ds";
+                    else if (typsemafora == 2)
+                        kod += "dynamic_sr";
+                    else if (typsemafora == 3)
+                        kod += "dynamic_ss";
+                    else if (typsemafora == 4)
+                        kod += "dynamic_rs";
+                    if (odchylsemafora == -1)
+                        kod += "_small,";
+                    else if (odchylsemafora == 0)
+                        kod += "_y,";
+                    else if (odchylsemafora == 1)
+                        kod += ",";
+                    else if (odchylsemafora == 2)
+                        kod += "_yn,";
+                }
+                // wpis słupa
+                if (typsemafora == 0)
+                    kod += "slup-ps";
+                else if (typsemafora == 4)
+                    kod += "slup-sbl";
+                else if (odchylsemafora > -1)
+                    kod += "slup-sm";
+                if (odchylsemafora == -1)
+                    kod += ",";
+                else if (odchylsemafora == 0)
+                    kod += "-y,";
+                else if (odchylsemafora == 1)
+                    kod += "-n,";
+                else if (odchylsemafora == 2)
+                    kod += "-yn,";
+                // wpis głowicy
+                if (odchylsemafora == -1)
+                {
+                    if (typsemafora == 0)
+                        kod += ilosckomor + "k-ps-k,";
+                    else
+                        kod += ilosckomor + "k-sm-k,";
+                }
+                else if (odchylsemafora == 1)
+                {
+                    if (typsemafora == 0)
+                        kod += ilosckomor + "k-ps-p,";
+                    else
+                        kod += ilosckomor + "k-sm-p,";
+                }
+                else
+                    kod += ilosckomor + "k-b-yny,";
+                // wpis drabinki
+                if (ilosckomor >= 1)
+                    if (ilosckomor <= 2)
+                    {
+                        kod += "drab-2k-";
+                        if (odchylsemafora == 0)
+                            kod += "y,";
+                        else if (odchylsemafora == 1)
+                            kod += "p,";
+                        else if (odchylsemafora == 2)
+                            kod += "yn,";
+                    }
+                if (ilosckomor >= 3)
+                    if (ilosckomor <= 4)
+                    {
+                        kod += "drab-4k-";
+                        if (odchylsemafora == 0)
+                            kod += "y,";
+                        else if (odchylsemafora == 1)
+                            kod += "p,";
+                        else if (odchylsemafora == 2)
+                            kod += "yn,";
+                    }
+                if (ilosckomor == 5)
+                {
+                    kod += "drab-5k-";
+                    if (odchylsemafora == 0)
+                        kod += "y,";
+                    else if (odchylsemafora == 1)
+                        kod += "p,";
+                    else if (odchylsemafora == 2)
+                        kod += "yn,";
+                }
+            }
+            PoleKodu.Text = kod;
         }
 
         #endregion
@@ -327,7 +438,6 @@ namespace Generator_semaforów
                     "\r\nw19 = " + w19 +
                     "\r\nw20 = " + w20 +
                     "\r\nw24 = " + w24 +
-                    "\r\nkarzelk = " + karzelk +
                     "\r\nuniew = " + uniew +
                     "\r\nppom = " + ppom +
                     "\r\npziel = " + pziel +
@@ -336,12 +446,14 @@ namespace Generator_semaforów
                     "\r\nkomora3 = " + komora3 +
                     "\r\nkomora4 = " + komora4 +
                     "\r\nkomora5 = " + komora5 +
+                    "\r\nilosckomor = " + ilosckomor +
                     "\r\npredkosc40 = " + predkosc40 +
                     "\r\npredkosc60 = " + predkosc60 +
                     "\r\npredkosc100 = " + predkosc100 +
                     "\r\npredkosc40na60 = " + predkosc40na60 +
                     "\r\npredkosc100naVmax = " + predkosc100naVmax +
-                    "\r\nkomoraBiala = " + komoraBiala;
+                    "\r\nkomoraBiala = " + komoraBiala +
+                    "\r\nkod = " + kod;
             debugger.Text = debug;
             
         }
