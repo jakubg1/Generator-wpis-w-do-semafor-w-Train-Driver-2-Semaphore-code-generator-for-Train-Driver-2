@@ -567,9 +567,8 @@
             // PoleKodu
             // 
             this.PoleKodu.Location = new System.Drawing.Point(370, 287);
-            this.PoleKodu.Multiline = true;
             this.PoleKodu.Name = "PoleKodu";
-            this.PoleKodu.Size = new System.Drawing.Size(240, 30);
+            this.PoleKodu.Size = new System.Drawing.Size(240, 20);
             this.PoleKodu.TabIndex = 38;
             this.PoleKodu.TextChanged += new System.EventHandler(this.PoleKodu_TextChanged);
             // 

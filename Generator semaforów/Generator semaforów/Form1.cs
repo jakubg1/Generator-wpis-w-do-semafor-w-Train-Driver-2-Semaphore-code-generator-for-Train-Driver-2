@@ -377,29 +377,27 @@ namespace Generator_semaforów
                 else
                     kod += ilosckomor + "k-b-yny,";
                 // wpis drabinki
-                if (ilosckomor >= 1)
-                    if (ilosckomor <= 2)
-                    {
-                        kod += "drab-2k-";
-                        if (odchylsemafora == 0)
-                            kod += "y,";
-                        else if (odchylsemafora == 1)
-                            kod += "p,";
-                        else if (odchylsemafora == 2)
-                            kod += "yn,";
-                    }
-                if (ilosckomor >= 3)
-                    if (ilosckomor <= 4)
-                    {
-                        kod += "drab-4k-";
-                        if (odchylsemafora == 0)
-                            kod += "y,";
-                        else if (odchylsemafora == 1)
-                            kod += "p,";
-                        else if (odchylsemafora == 2)
-                            kod += "yn,";
-                    }
-                if (ilosckomor == 5)
+                if (ilosckomor >= 1 & ilosckomor <= 2)
+                {
+                    kod += "drab-2k-";
+                    if (odchylsemafora == 0)
+                        kod += "y,";
+                    else if (odchylsemafora == 1)
+                        kod += "p,";
+                    else if (odchylsemafora == 2)
+                        kod += "yn,";
+                }
+                else if (ilosckomor >= 3 & ilosckomor <= 4)
+                {
+                    kod += "drab-4k-";
+                    if (odchylsemafora == 0)
+                        kod += "y,";
+                    else if (odchylsemafora == 1)
+                        kod += "p,";
+                    else if (odchylsemafora == 2)
+                        kod += "yn,";
+                }
+                else if (ilosckomor == 5)
                 {
                     kod += "drab-5k-";
                     if (odchylsemafora == 0)
@@ -409,6 +407,202 @@ namespace Generator_semaforów
                     else if (odchylsemafora == 2)
                         kod += "yn,";
                 }
+                // wskaźnik 1
+                if (ppom == false & pziel == false)
+                {
+                    if (w19 == true)
+                        kod += "wsk_w19,";
+                    else if (w20 == true)
+                        kod += "wsk_w20,";
+                    else if (w24 == true)
+                        kod += "wsk_w24,";
+                }
+                else
+                    kod += ",";
+                // wskaźnik 2
+                if (w1 == true)
+                    kod += "wsk_w1,";
+                else
+                    kod += ",";
+                // wskaźnik 3
+                if (ppom == true)
+                {
+                    if (w19 == true)
+                        kod += "wsk_w19,";
+                    else if (w20 == true)
+                        kod += "wsk_w20,";
+                    else if (w24 == true)
+                        kod += "wsk_w24,";
+                }
+                else if (pziel == true)
+                {
+                    if (w19 == true)
+                        kod += "wsk_w19,";
+                    else if (w20 == true)
+                        kod += "wsk_w20,";
+                    else if (w24 == true)
+                        kod += "wsk_w24,";
+                }
+                else if (w19 == true)
+                {
+                    if (w20 == true)
+                        kod += "wsk_w20,";
+                    else if (w24 == true)
+                        kod += "wsk_w24,";
+                }
+                else if (w19 == false & w20 == true)
+                {
+                    if (w24 == true)
+                        kod += "wsk_w24,";
+                }
+                else
+                    kod += ",";
+                // wskaźnik 4
+                if (ppom == true)
+                {
+                    if (w19 == true)
+                    {
+                        if (w20 == true)
+                            kod += "wsk_w20,";
+                        else if (w24 == true)
+                            kod += "wsk_w24,";
+                    }
+                    if (w19 == false & w20 == true)
+                    {
+                        if (w24 == true)
+                            kod += "wsk_w24,";
+                    }
+                }
+                else if (pziel == true)
+                {
+                    if (w19 == true)
+                    {
+                        if (w20 == true)
+                            kod += "wsk_w20,";
+                        else if (w24 == true)
+                            kod += "wsk_w24,";
+                    }
+                    if (w19 == false & w20 == true)
+                    {
+                        if (w24 == true)
+                            kod += "wsk_w24,";
+                    }
+                }
+                else if (w19 == true & w20 == true)
+                {
+                    if (w24 == true)
+                        kod += "wsk_w24,";
+                }
+                else
+                    kod += ",";
+                // pas świetlny
+                if (ppom == false & pziel == false)
+                    kod += ",";
+                else
+                    kod += "pas,";
+                // wskaźnik powtarzacza lub W18
+                if (typsemafora == 2)
+                {
+                    if (kolejnoscpowtarzacza == 0)
+                        kod += "wsk_1sp,";
+                    else if (kolejnoscpowtarzacza == 1)
+                        kod += "wsk_2sp,";
+                    else if (kolejnoscpowtarzacza == 2)
+                        kod += "wsk_3sp,";
+                }
+                else if (w18 == true)
+                    kod += "wsk_w18,";
+                else
+                    kod += ",";
+                // komora 1
+                if (komora5 == 1)
+                    kod += "light00,";
+                else if (komora5 == 2)
+                    kod += "light01,";
+                else if (komora5 == 3)
+                    kod += "light03,";
+                else if (komora5 == 4)
+                    kod += "light04,";
+                else if (komora5 == 5)
+                    kod += "light05,";
+                else if (komora5 == 6)
+                    kod += "light07,";
+                else
+                    kod += ",";
+                // komora 2
+                if (komora4 == 1)
+                    kod += "light00,";
+                else if (komora4 == 2)
+                    kod += "light01,";
+                else if (komora4 == 3)
+                    kod += "light03,";
+                else if (komora4 == 4)
+                    kod += "light04,";
+                else if (komora4 == 5)
+                    kod += "light05,";
+                else if (komora4 == 6)
+                    kod += "light07,";
+                else
+                    kod += ",";
+                // komora 3
+                if (komora3 == 1)
+                    kod += "light00,";
+                else if (komora3 == 2)
+                    kod += "light01,";
+                else if (komora3 == 3)
+                    kod += "light03,";
+                else if (komora3 == 4)
+                    kod += "light04,";
+                else if (komora3 == 5)
+                    kod += "light05,";
+                else if (komora3 == 6)
+                    kod += "light07,";
+                else
+                    kod += ",";
+                // komora 4
+                if (komora2 == 1)
+                    kod += "light00,";
+                else if (komora2 == 2)
+                    kod += "light01,";
+                else if (komora2 == 3)
+                    kod += "light03,";
+                else if (komora2 == 4)
+                    kod += "light04,";
+                else if (komora2 == 5)
+                    kod += "light05,";
+                else if (komora2 == 6)
+                    kod += "light07,";
+                else
+                    kod += ",";
+                // komora 5
+                if (komora1 == 1)
+                    kod += "light00,";
+                else if (komora1 == 2)
+                    kod += "light01,";
+                else if (komora1 == 3)
+                    kod += "light03,";
+                else if (komora1 == 4)
+                    kod += "light04,";
+                else if (komora1 == 5)
+                    kod += "light05,";
+                else if (komora1 == 6)
+                    kod += "light07,";
+                else
+                    kod += ",";
+                // pas świetlny
+                if (ppom == true & pziel == true)
+                    kod += "light09,light10,";
+                else if (ppom == true & pziel == false)
+                    kod += "light09,,";
+                else if (ppom == false & pziel == true)
+                    kod += "light10,,";
+                else if (ppom == false & pziel == false)
+                    kod += ",,";
+                // unieważnienie
+                if (uniew == true)
+                    kod += "wsk_w31,";
+                else
+                    kod += ",";
             }
             PoleKodu.Text = kod;
         }
