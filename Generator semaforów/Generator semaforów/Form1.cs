@@ -348,7 +348,7 @@ namespace Generator_semaforów
 
         #endregion
 
-        #region rysowanie semaforu
+        #region rysowanie semafora
 
         private void rysujSemafor(byte typ, byte komora1, byte komora2, byte komora3, byte komora4, byte komora5)
         {
