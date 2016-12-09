@@ -5,4 +5,19 @@
 
     <system:String x:Key="MainWindowTitle">Generator wpisów semaforów do TD2 - wersja 3.0.0</system:String>
     
+    <!--Menu-->
+    <system:String x:Key="MenuFile">Plik</system:String>
+    <system:String x:Key="MenuFileOpen">Otwórz</system:String>
+    <system:String x:Key="MenuFileSave">Zapisz</system:String>
+    <system:String x:Key="MenuFileExit">Wyjdź</system:String>
+    <!--Menu Setting-->
+    <system:String x:Key="MenuSetting">Ustawienia</system:String>
+    <system:String x:Key="MenuSettingLanguage">Język</system:String>
+    <system:String x:Key="MenuSettingLanguagePolish">Polski</system:String>
+    <system:String x:Key="MenuSettingLanguageEnglish">Angielski</system:String>
+    <!--Menu About-->
+    <system:String x:Key="MenuAbout">O programie</system:String>
+    <system:String x:Key="MenuAboutAuthors">Autorzy</system:String>
+    <system:String x:Key="MenuAboutVersion">Wersja</system:String>
+    
 </ResourceDictionary>

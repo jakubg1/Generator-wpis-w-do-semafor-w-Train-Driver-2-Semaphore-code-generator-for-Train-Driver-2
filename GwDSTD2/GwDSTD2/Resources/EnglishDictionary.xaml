@@ -5,4 +5,18 @@
 
     <system:String x:Key="MainWindowTitle">Entries semaphores generator for TD2 - version 3.0.0</system:String>
 
+    <!--Menu-->
+    <system:String x:Key="MenuFile">File</system:String>
+    <system:String x:Key="MenuFileOpen">Open</system:String>
+    <system:String x:Key="MenuFileSave">Save</system:String>
+    <system:String x:Key="MenuFileExit">Exit</system:String>
+    <!--Menu Setting-->
+    <system:String x:Key="MenuSetting">Settings</system:String>
+    <system:String x:Key="MenuSettingLanguage">Language</system:String>
+    <system:String x:Key="MenuSettingLanguagePolish">Polish</system:String>
+    <system:String x:Key="MenuSettingLanguageEnglish">English</system:String>
+    <!--Menu About-->
+    <system:String x:Key="MenuAbout">About program</system:String>
+    <system:String x:Key="MenuAboutAuthors">Authors</system:String>
+    <system:String x:Key="MenuAboutVersion">Version</system:String>
 </ResourceDictionary>
