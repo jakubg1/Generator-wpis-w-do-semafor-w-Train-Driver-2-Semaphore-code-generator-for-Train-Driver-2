@@ -4,9 +4,26 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GwDSTD2"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        mc:Ignorable="d" Height="350" Width="750" ResizeMode="NoResize" Title="{DynamicResource MainWindowTitle}">
     <Grid>
-        
+        <Menu x:Name="menu" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="744">
+            <MenuItem Header="MenuItem" Height="30">
+                <MenuItem Header="MenuItem" HorizontalAlignment="Left" Width="140"/>
+                <MenuItem Header="MenuItem" HorizontalAlignment="Left" Width="140"/>
+                <MenuItem Header="MenuItem" HorizontalAlignment="Left" Width="140"/>
+                <MenuItem Header="MenuItem" HorizontalAlignment="Left" Width="140"/>
+                <MenuItem Header="MenuItem" HorizontalAlignment="Left" Width="140"/>
+            </MenuItem>
+            <MenuItem Header="MenuItem">
+                <MenuItem Header="MenuItem" HorizontalAlignment="Left" Width="140"/>
+                <MenuItem Header="MenuItem" HorizontalAlignment="Left" Width="140"/>
+                <MenuItem Header="MenuItem" HorizontalAlignment="Left" Width="140"/>
+            </MenuItem>
+            <MenuItem Header="MenuItem">
+                <MenuItem Header="MenuItem" HorizontalAlignment="Left" Width="140"/>
+                <MenuItem Header="MenuItem" HorizontalAlignment="Left" Width="140"/>
+            </MenuItem>
+        </Menu>
+
     </Grid>
 </Window>
