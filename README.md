@@ -9,8 +9,9 @@ Obecny stan prac:
 
 Trwa budowa kolejnych kawałków kodu.
 Okno: 100%
-Funkcjonalność: 15%
+Funkcjonalność: 50%
+Ficzery: 0%
 
-Razem około 25%
+Razem ok. 60%
 
 Jeśli chcesz współtworzyć projekt napisz PW na http://eu07.kolej.org.pl z prośbą o dołączenie do projektu.
