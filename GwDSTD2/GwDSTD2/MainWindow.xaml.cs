@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,16 @@ namespace GwDSTD2
         public MainWindow()
         {
             InitializeComponent();
+            Closing += OnClosing;
+        }
+
+        internal void OnClosing(object sender, CancelEventArgs e)
+        {
+            //Properties.Settings.Default.Language = this.Height;
+
+
+            //save all settings to file
+            Properties.Settings.Default.Save();
         }
     }
 }
