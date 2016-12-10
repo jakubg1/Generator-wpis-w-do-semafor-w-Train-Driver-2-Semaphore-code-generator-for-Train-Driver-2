@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="GwDSTD2" GeneratedClassName="UserSettings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Language" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Polish</Value>
+    </Setting>
+    <Setting Name="GenerateCodeType" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Editor</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

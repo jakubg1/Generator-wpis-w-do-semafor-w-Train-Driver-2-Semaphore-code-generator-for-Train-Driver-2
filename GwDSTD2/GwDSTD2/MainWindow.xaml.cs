@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,7 +32,42 @@ namespace GwDSTD2
         public MainWindow()
         {
             InitializeComponent();
+            LoadUserSettings();
             Closing += OnClosing;
+        }
+
+        private void LoadUserSettings()
+        {
+            string language = Properties.UserSettings.Default.Language;
+            string generateCodeType = Properties.UserSettings.Default.GenerateCodeType;
+
+            if (language.Equals("Polish"))
+            {
+                MenuSettingsLanguagePolish.IsChecked = true;
+                MenuSettingsLanguageEnglish.IsChecked = !MenuSettingsLanguagePolish.IsChecked;
+                ResourceDictionary dictionary = new ResourceDictionary();
+                dictionary.Source = new Uri("Resources/PolishDictionary.xaml", UriKind.Relative);
+                this.Resources.MergedDictionaries.Add(dictionary);
+            }
+            else if (language.Equals("English"))
+            {
+                MenuSettingsLanguageEnglish.IsChecked = true;
+                MenuSettingsLanguagePolish.IsChecked = !MenuSettingsLanguageEnglish.IsChecked;
+                ResourceDictionary dictionary = new ResourceDictionary();
+                dictionary.Source = new Uri("Resources/EnglishDictionary.xaml", UriKind.Relative);
+                this.Resources.MergedDictionaries.Add(dictionary);
+            }
+
+            if (generateCodeType.Equals("Editor"))
+            {
+                MenuSettingsCodeDestinationEditor.IsChecked = true;
+                MenuSettingsCodeDestinationFile.IsChecked = !MenuSettingsCodeDestinationEditor.IsChecked;
+            }
+            else if (generateCodeType.Equals("File"))
+            {
+                MenuSettingsCodeDestinationFile.IsChecked = true;
+                MenuSettingsCodeDestinationEditor.IsChecked = !MenuSettingsCodeDestinationFile.IsChecked;
+            }
         }
 
         internal void OnClosing(object sender, CancelEventArgs e)
@@ -41,7 +77,7 @@ namespace GwDSTD2
             if (result == MessageBoxResult.Yes)
             {
                 e.Cancel = false;
-                Properties.Settings.Default.Save();
+                Properties.UserSettings.Default.Save();
             }
             else
             {
@@ -60,6 +96,7 @@ namespace GwDSTD2
             ResourceDictionary dictionary = new ResourceDictionary();
             dictionary.Source = new Uri("Resources/PolishDictionary.xaml", UriKind.Relative);
             this.Resources.MergedDictionaries.Add(dictionary);
+            Properties.UserSettings.Default.Language = "Polish";
         }
 
         private void MenuSettingsLanguageEnglish_Click(object sender, RoutedEventArgs e)
@@ -69,18 +106,21 @@ namespace GwDSTD2
             ResourceDictionary dictionary = new ResourceDictionary();
             dictionary.Source = new Uri("Resources/EnglishDictionary.xaml", UriKind.Relative);
             this.Resources.MergedDictionaries.Add(dictionary);
+            Properties.UserSettings.Default.Language = "English";
         }
 
         private void MenuSettingsCodeDestinationEditor_Click(object sender, RoutedEventArgs e)
         {
             MenuSettingsCodeDestinationEditor.IsChecked = MenuSettingsCodeDestinationFile.IsChecked;
             MenuSettingsCodeDestinationFile.IsChecked = !MenuSettingsCodeDestinationFile.IsChecked;
+            Properties.UserSettings.Default.GenerateCodeType = "Editor";
         }
 
         private void MenuSettingsCodeDestinationFile_Click(object sender, RoutedEventArgs e)
         {
             MenuSettingsCodeDestinationFile.IsChecked = MenuSettingsCodeDestinationEditor.IsChecked;
             MenuSettingsCodeDestinationEditor.IsChecked = !MenuSettingsCodeDestinationEditor.IsChecked;
+            Properties.UserSettings.Default.GenerateCodeType = "File";
         }
 
         private void MenuFileOpen_Click(object sender, RoutedEventArgs e)
@@ -119,5 +159,12 @@ namespace GwDSTD2
         }
 
         #endregion
+
+        private void MenuDebug_Click(object sender, RoutedEventArgs e)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("Ścieżka pliku konfiguracyjnego\n" + ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.PerUserRoamingAndLocal).FilePath);
+            MessageBox.Show(sb.ToString());
+        }
     }
 }

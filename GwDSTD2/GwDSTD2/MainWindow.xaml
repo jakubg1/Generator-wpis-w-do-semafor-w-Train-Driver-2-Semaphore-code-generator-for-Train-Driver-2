@@ -47,6 +47,7 @@
                 <MenuItem x:Name="MenuAboutAuthors" Header="{DynamicResource MenuAboutAuthors}" HorizontalAlignment="Left" Width="140" Click="MenuAboutAuthors_Click"/>
                 <MenuItem x:Name="MenuAboutVersion" Header="{DynamicResource MenuAboutVersion}" HorizontalAlignment="Left" Width="140" Click="MenuAboutVersion_Click"/>
             </MenuItem>
+            <MenuItem x:Name="MenuDebug" Header="Debug" Click="MenuDebug_Click"/>
         </Menu>
     </Grid>
 </Window>
