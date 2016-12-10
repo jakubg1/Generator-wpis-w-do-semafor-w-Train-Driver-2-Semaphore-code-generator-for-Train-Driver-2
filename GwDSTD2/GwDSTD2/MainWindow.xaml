@@ -7,23 +7,27 @@
         mc:Ignorable="d" Height="350" Width="750" ResizeMode="NoResize" Title="{DynamicResource MainWindowTitle}">
     
     <Grid>
-        <Menu x:Name="menu" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="744">
-            <MenuItem Header="{DynamicResource MenuFile}" Height="30">
-                <MenuItem Header="{DynamicResource MenuFileOpen}" HorizontalAlignment="Left" Width="140"/>
-                <MenuItem Header="{DynamicResource MenuFileSave}" HorizontalAlignment="Left" Width="140"/>
-                <MenuItem Header="{DynamicResource MenuFileExit}" HorizontalAlignment="Left" Width="140"/>
+        <Menu x:Name="MainMenu" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="744" IsMainMenu="True"> 
+            <MenuItem x:Name="MenuFile" Header="{DynamicResource MenuFile}" Height="30" >
+                <MenuItem x:Name="MenuFileOpen" Header="{DynamicResource MenuFileOpen}" HorizontalAlignment="Left" Width="175">
+                    <MenuItem.Icon>
+                        <Image Source="Images/paste.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="MenuFileSave" Header="{DynamicResource MenuFileSave}" HorizontalAlignment="Left" Width="175" />
+                <MenuItem x:Name="MenuFileExit" Header="{DynamicResource MenuFileExit}" HorizontalAlignment="Left" Width="175" />
             </MenuItem>
-            <MenuItem x:Name="MenuSettingsLanguage" Header="{DynamicResource MenuSetting}">
-                <MenuItem Header="{DynamicResource MenuSettingLanguage}" HorizontalAlignment="Left" Width="140">
-                    <MenuItem x:Name="MenuSettingsLanguagePolish"  Header="{DynamicResource MenuSettingLanguagePolish}" HorizontalAlignment="Left" Width="140" IsCheckable="True"/>
-                    <MenuItem x:Name="MenuSettingsLanguageEnglish" Header="{DynamicResource MenuSettingLanguageEnglish}" HorizontalAlignment="Left" Width="140" IsCheckable="True"/>
+            <MenuItem x:Name="MenuSettings" Header="{DynamicResource MenuSetting}">
+                <MenuItem x:Name="MenuSettingsLanguage" Header="{DynamicResource MenuSettingLanguage}" HorizontalAlignment="Left" Width="140">
+                    <MenuItem x:Name="MenuSettingsLanguagePolish"  Header="{DynamicResource MenuSettingLanguagePolish}" HorizontalAlignment="Left" Width="140" IsCheckable="True" IsChecked="True" Click="MenuSettingsLanguagePolish_Click"/>
+                    <MenuItem x:Name="MenuSettingsLanguageEnglish" Header="{DynamicResource MenuSettingLanguageEnglish}" HorizontalAlignment="Left" Width="140" IsCheckable="True" IsChecked="False" Click="MenuSettingsLanguageEnglish_Click"/>
                 </MenuItem>
             </MenuItem>
-            <MenuItem Header="{DynamicResource MenuAbout}">
-                <MenuItem Header="{DynamicResource MenuAboutAuthors}" HorizontalAlignment="Left" Width="140"/>
-                <MenuItem Header="{DynamicResource MenuAboutVersion}" HorizontalAlignment="Left" Width="140"/>
+            <MenuItem x:Name="MenuAbout" Header="{DynamicResource MenuAbout}">
+                <MenuItem x:Name="Help" Header="{DynamicResource MenuAboutHelp}" HorizontalAlignment="Left" Width="140"/>
+                <MenuItem x:Name="MenuAboutAuthors" Header="{DynamicResource MenuAboutAuthors}" HorizontalAlignment="Left" Width="140"/>
+                <MenuItem x:Name="MenuAboutVersion" Header="{DynamicResource MenuAboutVersion}" HorizontalAlignment="Left" Width="140"/>
             </MenuItem>
         </Menu>
-
     </Grid>
 </Window>

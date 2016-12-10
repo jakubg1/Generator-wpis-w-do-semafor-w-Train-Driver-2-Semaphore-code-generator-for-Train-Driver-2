@@ -17,6 +17,7 @@
     <system:String x:Key="MenuSettingLanguageEnglish">Angielski</system:String>
     <!--Menu About-->
     <system:String x:Key="MenuAbout">O programie</system:String>
+    <system:String x:Key="MenuAboutHelp">Pomoc</system:String>
     <system:String x:Key="MenuAboutAuthors">Autorzy</system:String>
     <system:String x:Key="MenuAboutVersion">Wersja</system:String>
     

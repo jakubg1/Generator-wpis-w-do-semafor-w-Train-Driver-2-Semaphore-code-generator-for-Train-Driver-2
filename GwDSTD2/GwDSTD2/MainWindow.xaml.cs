@@ -35,5 +35,23 @@ namespace GwDSTD2
             //save all settings to file
             Properties.Settings.Default.Save();
         }
+
+        private void MenuSettingsLanguagePolish_Click(object sender, RoutedEventArgs e)
+        {
+            MenuSettingsLanguagePolish.IsChecked = MenuSettingsLanguageEnglish.IsChecked;
+            MenuSettingsLanguageEnglish.IsChecked = !MenuSettingsLanguageEnglish.IsChecked;
+            ResourceDictionary dictionary = new ResourceDictionary();
+            dictionary.Source = new Uri("Resources/PolishDictionary.xaml", UriKind.Relative);
+            this.Resources.MergedDictionaries.Add(dictionary);
+        }
+
+        private void MenuSettingsLanguageEnglish_Click(object sender, RoutedEventArgs e)
+        {
+            MenuSettingsLanguageEnglish.IsChecked = MenuSettingsLanguagePolish.IsChecked;
+            MenuSettingsLanguagePolish.IsChecked = !MenuSettingsLanguagePolish.IsChecked;
+            ResourceDictionary dictionary = new ResourceDictionary();
+            dictionary.Source = new Uri("Resources/EnglishDictionary.xaml", UriKind.Relative);
+            this.Resources.MergedDictionaries.Add(dictionary);
+        }
     }
 }

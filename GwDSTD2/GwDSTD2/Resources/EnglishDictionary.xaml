@@ -17,6 +17,7 @@
     <system:String x:Key="MenuSettingLanguageEnglish">English</system:String>
     <!--Menu About-->
     <system:String x:Key="MenuAbout">About program</system:String>
+    <system:String x:Key="MenuAboutHelp">Help</system:String>
     <system:String x:Key="MenuAboutAuthors">Authors</system:String>
     <system:String x:Key="MenuAboutVersion">Version</system:String>
 </ResourceDictionary>
