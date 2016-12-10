@@ -4,19 +4,19 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:gwDstd2="clr-namespace:GwDSTD2"
-        mc:Ignorable="d" Height="490" Width="775" ResizeMode="NoResize" Title="{DynamicResource MainWindowTitle}">
+        mc:Ignorable="d" Height="480" Width="750" ResizeMode="NoResize" Title="{DynamicResource MainWindowTitle}">
 
     <Grid Background="{DynamicResource {x:Static SystemColors.InfoBrushKey}}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="62*"/>
-            <RowDefinition Height="399*"/>
+            <RowDefinition Height="69*"/>
+            <RowDefinition Height="377*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="124*"/>
+            <ColumnDefinition Width="123*"/>
             <ColumnDefinition Width="125*"/>
-            <ColumnDefinition Width="125*"/>
-            <ColumnDefinition Width="122*"/>
         </Grid.ColumnDefinitions>
-        <Menu x:Name="MainMenu" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="769" IsMainMenu="True" Grid.ColumnSpan="3">
+        <Menu x:Name="MainMenu" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="744" IsMainMenu="True" Grid.ColumnSpan="3">
             <MenuItem x:Name="MenuFile" Header="{DynamicResource MenuFile}" Height="30" >
                 <MenuItem x:Name="MenuFileOpen" Header="{DynamicResource MenuFileOpen}" HorizontalAlignment="Left" Width="125" Click="MenuFileOpen_Click">
                     <MenuItem.Icon>
@@ -79,38 +79,66 @@
                 <CheckBox x:Name="checkBox_Copy3" Content="W24" Margin="6"/>
             </WrapPanel>
         </GroupBox>
-        <GroupBox x:Name="groupBox_Copy2" Header="Opcje dodatkowe" HorizontalAlignment="Left" Margin="10,292,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="-0.113,-0.87" Height="81" Width="230">
+        <GroupBox x:Name="groupBox_Copy2" Header="Opcje dodatkowe" HorizontalAlignment="Left" Margin="10,292,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="-0.113,-0.87" Height="73" Width="230">
             <WrapPanel Margin="10,10,8,7" Orientation="Vertical">
                 <CheckBox x:Name="checkBox2" Content="Karzełkowy" Margin="6"/>
                 <CheckBox x:Name="checkBo4" Content="Unieważniony" Margin="6"/>
             </WrapPanel>
         </GroupBox>
-        <GroupBox x:Name="groupBox_Copy3" Header="Komory" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="-0.113,-0.87" Height="165" Width="230" Grid.Column="1">
-            <StackPanel Margin="10,10,8,7" Orientation="Vertical">
-                <Label x:Name="label1" Content="Label" Margin="0,0,120,0"/>
-                <Label x:Name="label1_Copy" Content="Label" Margin="0,0,120,0"/>
-                <Label x:Name="label1_Copy1" Content="Label" Margin="0,0,120,0"/>
-                <Label x:Name="label1_Copy2" Content="Label" Margin="0,0,120,0"/>
-                <Label x:Name="label1_Copy3" Content="Label" Margin="0,0,120,0"/>
-            </StackPanel>
+        <GroupBox x:Name="groupBox_Copy3" Header="Komory" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="-0.113,-0.87" Height="179" Width="230" Grid.Column="1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="41*"/>
+                    <ColumnDefinition Width="68*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="30*"/>
+                </Grid.RowDefinitions>
+                <Label x:Name="label1" Content="#1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="82" Height="26"/>
+                <Label x:Name="label1_Copy" Content="Pas świetlny" HorizontalAlignment="Left" VerticalAlignment="Top" Width="82" Margin="0,1,0,0" Grid.Row="5" Height="25"/>
+                <Label x:Name="label1_Copy1" Content="#5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="82" Grid.Row="4" Height="26"/>
+                <Label x:Name="label1_Copy2" Content="#4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="82" Grid.Row="3" Height="26"/>
+                <Label x:Name="label1_Copy3" Content="#3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="82" Grid.Row="2" Height="26"/>
+                <Label x:Name="label1_Copy4" Content="#2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="82" Grid.Row="1" Height="26"/>
+                <ComboBox x:Name="comboBox1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="136" Height="26" IsSynchronizedWithCurrentItem="False">
+                    <ComboBoxItem Content="(Brak)" IsSelected="True"/>
+                    <ComboBoxItem Content="Niebieskie"/>
+                    <ComboBoxItem Content="Zielone"/>
+                    <ComboBoxItem Content="Pomarańczowe"/>
+                    <ComboBoxItem Content="Pomarańczowe"/>
+                    <ComboBoxItem Content="Czerwone"/>
+                    <ComboBoxItem Content="Białe"/>
+                </ComboBox>
+                <ComboBox x:Name="comboBox1_Copy1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="136" Height="26" Grid.Row="5"/>
+                <ComboBox x:Name="comboBox1_Copy2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="136" Height="26" Grid.Row="4"/>
+                <ComboBox x:Name="comboBox1_Copy3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="136" Height="26" Grid.Row="3"/>
+                <ComboBox x:Name="comboBox1_Copy4" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="136" Height="26" Grid.Row="2"/>
+                <ComboBox x:Name="comboBox1_Copy5" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="136" Height="26" Grid.Row="1"/>
+
+            </Grid>
         </GroupBox>
-        <GroupBox x:Name="groupBox_Copy5" Header="Prędkość na tym semaforze" HorizontalAlignment="Left" Margin="10,180,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="-0.113,-0.87" Height="96" Width="230" Grid.Column="1">
+        <GroupBox x:Name="groupBox_Copy5" Header="Prędkość na tym semaforze" HorizontalAlignment="Left" Margin="10,194,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="-0.113,-0.87" Height="74" Width="230" Grid.Column="1">
             <WrapPanel Margin="10,10,8,7">
-                <CheckBox x:Name="checkBox1" Content="CheckBox" Margin="6"/>
-                <CheckBox x:Name="checkBox9" Content="CheckBox" Margin="6"/>
-                <CheckBox x:Name="checkBox34" Content="CheckBox" Margin="6"/>
+                <CheckBox x:Name="checkBox1" Content="40" Margin="6"/>
+                <CheckBox x:Name="checkBox9" Content="60" Margin="6"/>
+                <CheckBox x:Name="checkBox34" Content="100" Margin="6"/>
             </WrapPanel>
         </GroupBox>
-        <GroupBox x:Name="groupBox_Copy6" Header="Prędkość na następnym semaforze" HorizontalAlignment="Left" Margin="10,281,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="-0.113,-0.87" Height="92" Width="230" Grid.Column="1">
+        <GroupBox x:Name="groupBox_Copy6" Header="Prędkość na następnym semaforze" HorizontalAlignment="Left" Margin="10,273,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="-0.113,-0.87" Height="92" Width="230" Grid.Column="1">
             <WrapPanel Margin="10,10,8,7">
-                <CheckBox x:Name="checkBox12" Content="CheckBox" Margin="6"/>
-                <CheckBox x:Name="checkBox242" Content="CheckBox" Margin="6"/>
-                <CheckBox x:Name="checkBox124" Content="CheckBox" Margin="6"/>
+                <CheckBox x:Name="checkBox12" Content="40/60" Margin="6"/>
+                <CheckBox x:Name="checkBox242" Content="100/Vmax" Margin="6"/>
+                <CheckBox x:Name="checkBox124" Content="Komora biała" Margin="6"/>
             </WrapPanel>
         </GroupBox>
         <GroupBox x:Name="groupBox_Copy8" Header="Podgląd" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="-0.113,-0.87" Height="179" Width="230" Grid.Column="2"/>
         <Button x:Name="button" Content="Generuj" Grid.Column="2" HorizontalAlignment="Left" Margin="10,241,0,0" Grid.Row="1" VerticalAlignment="Top" Width="230" Height="35"/>
-        <TextBox x:Name="textBox" Grid.Column="2" HorizontalAlignment="Left" Height="35" Margin="10,201,0,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="230"/>
+        <TextBox x:Name="textBox" Grid.Column="2" HorizontalAlignment="Left" Height="35" Margin="10,201,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="230"/>
 
     </Grid>
 </Window>
