@@ -29,11 +29,17 @@ namespace GwDSTD2
 
         internal void OnClosing(object sender, CancelEventArgs e)
         {
-            //Properties.Settings.Default.Language = this.Height;
-
-
-            //save all settings to file
-            Properties.Settings.Default.Save();
+            MessageBoxResult result = MessageBox.Show(Application.Current.Resources["DialogExitQuestion"].ToString(),
+                Application.Current.Resources["DialogExitQuestion"].ToString(), MessageBoxButton.YesNo, MessageBoxImage.Information);
+            if (result == MessageBoxResult.Yes)
+            {
+                e.Cancel = false;
+                Properties.Settings.Default.Save();
+            }
+            else
+            {
+                e.Cancel = true;
+            }
         }
 
         private void MenuSettingsLanguagePolish_Click(object sender, RoutedEventArgs e)
@@ -52,6 +58,36 @@ namespace GwDSTD2
             ResourceDictionary dictionary = new ResourceDictionary();
             dictionary.Source = new Uri("Resources/EnglishDictionary.xaml", UriKind.Relative);
             this.Resources.MergedDictionaries.Add(dictionary);
+        }
+
+        private void MenuFileOpen_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void MenuFileSave_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void MenuFileReset_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void MenuFileExit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void MenuSettingsCodeDestinationEditor_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void MenuSettingsCodeDestinationFile_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

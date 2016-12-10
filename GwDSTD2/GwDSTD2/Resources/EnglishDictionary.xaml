@@ -5,16 +5,27 @@
 
     <system:String x:Key="MainWindowTitle">Entries semaphores generator for TD2 - version 3.0.0</system:String>
 
+    <!--Dialogs-->
+    <system:String x:Key="DialogExitQuestion">Are you sure to quit?</system:String>
+    <system:String x:Key="DialogExitRespondYes">Yes</system:String>
+    <system:String x:Key="DialogExitRespondNo">No</system:String>
+    
     <!--Menu-->
     <system:String x:Key="MenuFile">File</system:String>
     <system:String x:Key="MenuFileOpen">Open</system:String>
     <system:String x:Key="MenuFileSave">Save</system:String>
+    <system:String x:Key="MenuFileReset">Reset</system:String>
     <system:String x:Key="MenuFileExit">Exit</system:String>
     <!--Menu Setting-->
-    <system:String x:Key="MenuSetting">Settings</system:String>
+    <system:String x:Key="MenuSetting">Setting</system:String>
+    <!--Menu Setting Language-->
     <system:String x:Key="MenuSettingLanguage">Language</system:String>
     <system:String x:Key="MenuSettingLanguagePolish">Polish</system:String>
     <system:String x:Key="MenuSettingLanguageEnglish">English</system:String>
+    <!-- Menu Setting Code Destination-->
+    <system:String x:Key="MenuSettingCodeDestination">Generating place</system:String>
+    <system:String x:Key="MenuSettingCodeDestinationEditor">Editor</system:String>
+    <system:String x:Key="MenuSettingCodeDestinationFile">File</system:String>
     <!--Menu About-->
     <system:String x:Key="MenuAbout">About program</system:String>
     <system:String x:Key="MenuAboutHelp">Help</system:String>

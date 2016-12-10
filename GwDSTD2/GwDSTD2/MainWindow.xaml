@@ -5,22 +5,41 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:gwDstd2="clr-namespace:GwDSTD2"
         mc:Ignorable="d" Height="350" Width="750" ResizeMode="NoResize" Title="{DynamicResource MainWindowTitle}">
-    
+
     <Grid>
-        <Menu x:Name="MainMenu" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="744" IsMainMenu="True"> 
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="74*"/>
+        </Grid.ColumnDefinitions>
+        <Menu x:Name="MainMenu" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="744" IsMainMenu="True" Grid.ColumnSpan="3">
             <MenuItem x:Name="MenuFile" Header="{DynamicResource MenuFile}" Height="30" >
-                <MenuItem x:Name="MenuFileOpen" Header="{DynamicResource MenuFileOpen}" HorizontalAlignment="Left" Width="175">
+                <MenuItem x:Name="MenuFileOpen" Header="{DynamicResource MenuFileOpen}" HorizontalAlignment="Left" Width="125" Click="MenuFileOpen_Click">
                     <MenuItem.Icon>
-                        <Image Source="Images/paste.png" />
+                        <Image Source="Resources/MenuFileOpenIcon.png" />
                     </MenuItem.Icon>
                 </MenuItem>
-                <MenuItem x:Name="MenuFileSave" Header="{DynamicResource MenuFileSave}" HorizontalAlignment="Left" Width="175" />
-                <MenuItem x:Name="MenuFileExit" Header="{DynamicResource MenuFileExit}" HorizontalAlignment="Left" Width="175" />
+                <MenuItem x:Name="MenuFileSave" Header="{DynamicResource MenuFileSave}" HorizontalAlignment="Left" Width="125" Click="MenuFileSave_Click">
+                    <MenuItem.Icon>
+                        <Image Source="Resources/MenuFileSaveIcon.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="MenuFileRest" Header="{DynamicResource MenuFileReset}" HorizontalAlignment="Left" Width="125" Click="MenuFileReset_Click" >
+                </MenuItem>
+                <MenuItem x:Name="MenuFileExit" Header="{DynamicResource MenuFileExit}" HorizontalAlignment="Left" Width="125" Click="MenuFileExit_Click" >
+                    <MenuItem.Icon>
+                        <Image Source="Resources/MenuFileExitIcon.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
             </MenuItem>
             <MenuItem x:Name="MenuSettings" Header="{DynamicResource MenuSetting}">
-                <MenuItem x:Name="MenuSettingsLanguage" Header="{DynamicResource MenuSettingLanguage}" HorizontalAlignment="Left" Width="140">
+                <MenuItem x:Name="MenuSettingsLanguage" Header="{DynamicResource MenuSettingLanguage}" HorizontalAlignment="Left" Width="200">
                     <MenuItem x:Name="MenuSettingsLanguagePolish"  Header="{DynamicResource MenuSettingLanguagePolish}" HorizontalAlignment="Left" Width="140" IsCheckable="True" IsChecked="True" Click="MenuSettingsLanguagePolish_Click"/>
                     <MenuItem x:Name="MenuSettingsLanguageEnglish" Header="{DynamicResource MenuSettingLanguageEnglish}" HorizontalAlignment="Left" Width="140" IsCheckable="True" IsChecked="False" Click="MenuSettingsLanguageEnglish_Click"/>
+                </MenuItem>
+                <MenuItem x:Name="MenuSettingsCodeDestination" Header="{DynamicResource MenuSettingCodeDestination}" HorizontalAlignment="Left" Width="200">
+                    <MenuItem x:Name="MenuSettingsCodeDestinationEditor" Header="{DynamicResource MenuSettingCodeDestinationEditor}" HorizontalAlignment="Left" Width="140" IsCheckable="True" IsChecked="True" Click="MenuSettingsCodeDestinationEditor_Click"/>
+                    <MenuItem x:Name="MenuSettingsCodeDestinationFile" Header="{DynamicResource MenuSettingCodeDestinationFile}" HorizontalAlignment="Left" Width="140" IsCheckable="True" IsChecked="False" Click="MenuSettingsCodeDestinationFile_Click"/>
                 </MenuItem>
             </MenuItem>
             <MenuItem x:Name="MenuAbout" Header="{DynamicResource MenuAbout}">

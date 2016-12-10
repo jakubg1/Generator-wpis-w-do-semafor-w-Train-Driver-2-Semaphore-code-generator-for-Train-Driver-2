@@ -5,16 +5,27 @@
 
     <system:String x:Key="MainWindowTitle">Generator wpisów semaforów do TD2 - wersja 3.0.0</system:String>
     
+    <!--Dialogs-->
+    <system:String x:Key="DialogExitQuestion">Czy chcesz na pewno wyjść?</system:String>
+    <system:String x:Key="DialogExitRespondYes">Tak</system:String>
+    <system:String x:Key="DialogExitRespondNo">Nie</system:String>
+    
     <!--Menu-->
     <system:String x:Key="MenuFile">Plik</system:String>
     <system:String x:Key="MenuFileOpen">Otwórz</system:String>
     <system:String x:Key="MenuFileSave">Zapisz</system:String>
+    <system:String x:Key="MenuFileReset">Reset</system:String>
     <system:String x:Key="MenuFileExit">Wyjdź</system:String>
     <!--Menu Setting-->
     <system:String x:Key="MenuSetting">Ustawienia</system:String>
+    <!--Menu Setting Language-->
     <system:String x:Key="MenuSettingLanguage">Język</system:String>
     <system:String x:Key="MenuSettingLanguagePolish">Polski</system:String>
     <system:String x:Key="MenuSettingLanguageEnglish">Angielski</system:String>
+    <!-- Menu Setting Code Destination-->
+    <system:String x:Key="MenuSettingCodeDestination">Miejsce generowania</system:String>
+    <system:String x:Key="MenuSettingCodeDestinationEditor">Edytor</system:String>
+    <system:String x:Key="MenuSettingCodeDestinationFile">Plik</system:String>
     <!--Menu About-->
     <system:String x:Key="MenuAbout">O programie</system:String>
     <system:String x:Key="MenuAboutHelp">Pomoc</system:String>
