@@ -21,6 +21,13 @@ namespace GwDSTD2
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        #region variables
+
+        #endregion
+
+        #region window events, constructor
+
         public MainWindow()
         {
             InitializeComponent();
@@ -42,6 +49,10 @@ namespace GwDSTD2
             }
         }
 
+        #endregion
+
+        #region menu events
+
         private void MenuSettingsLanguagePolish_Click(object sender, RoutedEventArgs e)
         {
             MenuSettingsLanguagePolish.IsChecked = MenuSettingsLanguageEnglish.IsChecked;
@@ -58,6 +69,18 @@ namespace GwDSTD2
             ResourceDictionary dictionary = new ResourceDictionary();
             dictionary.Source = new Uri("Resources/EnglishDictionary.xaml", UriKind.Relative);
             this.Resources.MergedDictionaries.Add(dictionary);
+        }
+
+        private void MenuSettingsCodeDestinationEditor_Click(object sender, RoutedEventArgs e)
+        {
+            MenuSettingsCodeDestinationEditor.IsChecked = MenuSettingsCodeDestinationFile.IsChecked;
+            MenuSettingsCodeDestinationFile.IsChecked = !MenuSettingsCodeDestinationFile.IsChecked;
+        }
+
+        private void MenuSettingsCodeDestinationFile_Click(object sender, RoutedEventArgs e)
+        {
+            MenuSettingsCodeDestinationFile.IsChecked = MenuSettingsCodeDestinationEditor.IsChecked;
+            MenuSettingsCodeDestinationEditor.IsChecked = !MenuSettingsCodeDestinationEditor.IsChecked;
         }
 
         private void MenuFileOpen_Click(object sender, RoutedEventArgs e)
@@ -80,14 +103,21 @@ namespace GwDSTD2
 
         }
 
-        private void MenuSettingsCodeDestinationEditor_Click(object sender, RoutedEventArgs e)
+        private void Help_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void MenuSettingsCodeDestinationFile_Click(object sender, RoutedEventArgs e)
+        private void MenuAboutAuthors_Click(object sender, RoutedEventArgs e)
         {
 
         }
+
+        private void MenuAboutVersion_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        #endregion
     }
 }

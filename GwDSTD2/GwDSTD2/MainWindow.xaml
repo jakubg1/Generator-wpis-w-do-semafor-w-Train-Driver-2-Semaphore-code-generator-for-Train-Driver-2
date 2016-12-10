@@ -43,9 +43,9 @@
                 </MenuItem>
             </MenuItem>
             <MenuItem x:Name="MenuAbout" Header="{DynamicResource MenuAbout}">
-                <MenuItem x:Name="Help" Header="{DynamicResource MenuAboutHelp}" HorizontalAlignment="Left" Width="140"/>
-                <MenuItem x:Name="MenuAboutAuthors" Header="{DynamicResource MenuAboutAuthors}" HorizontalAlignment="Left" Width="140"/>
-                <MenuItem x:Name="MenuAboutVersion" Header="{DynamicResource MenuAboutVersion}" HorizontalAlignment="Left" Width="140"/>
+                <MenuItem x:Name="Help" Header="{DynamicResource MenuAboutHelp}" HorizontalAlignment="Left" Width="140" Click="Help_Click"/>
+                <MenuItem x:Name="MenuAboutAuthors" Header="{DynamicResource MenuAboutAuthors}" HorizontalAlignment="Left" Width="140" Click="MenuAboutAuthors_Click"/>
+                <MenuItem x:Name="MenuAboutVersion" Header="{DynamicResource MenuAboutVersion}" HorizontalAlignment="Left" Width="140" Click="MenuAboutVersion_Click"/>
             </MenuItem>
         </Menu>
     </Grid>
