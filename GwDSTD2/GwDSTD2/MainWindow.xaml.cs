@@ -123,6 +123,51 @@ namespace GwDSTD2
             Properties.UserSettings.Default.GenerateCodeType = "File";
         }
 
+        private void MenuSettingsSemaphoreTypeSblSemaphore_Click(object sender, RoutedEventArgs e)
+        {
+            MenuSettingsSemaphoreTypeSblSemaphore.IsChecked = MenuSettingsSemaphoreTypeSblSemaphore.IsChecked;
+            MenuSettingsSemaphoreTypeRepeater.IsChecked = !MenuSettingsSemaphoreTypeSblSemaphore.IsChecked;
+            MenuSettingsSemaphoreTypeNormalSemaphore.IsChecked = !MenuSettingsSemaphoreTypeSblSemaphore.IsChecked;
+            MenuSettingsSemaphoreTypeManeuverShield.IsChecked = !MenuSettingsSemaphoreTypeSblSemaphore.IsChecked;
+            MenuSettingsSemaphoreTypeWarningShield.IsChecked = !MenuSettingsSemaphoreTypeSblSemaphore.IsChecked;
+        }
+
+        private void MenuSettingsSemaphoreTypeRepeater_Click(object sender, RoutedEventArgs e)
+        {
+            MenuSettingsSemaphoreTypeRepeater.IsChecked = MenuSettingsSemaphoreTypeRepeater.IsChecked;
+            MenuSettingsSemaphoreTypeSblSemaphore.IsChecked = !MenuSettingsSemaphoreTypeRepeater.IsChecked;
+            MenuSettingsSemaphoreTypeNormalSemaphore.IsChecked = !MenuSettingsSemaphoreTypeRepeater.IsChecked;
+            MenuSettingsSemaphoreTypeManeuverShield.IsChecked = !MenuSettingsSemaphoreTypeRepeater.IsChecked;
+            MenuSettingsSemaphoreTypeWarningShield.IsChecked = !MenuSettingsSemaphoreTypeRepeater.IsChecked;
+        }
+
+        private void MenuSettingsSemaphoreTypeNormalSemaphore_Click(object sender, RoutedEventArgs e)
+        {
+            MenuSettingsSemaphoreTypeNormalSemaphore.IsChecked = MenuSettingsSemaphoreTypeNormalSemaphore.IsChecked;
+            MenuSettingsSemaphoreTypeRepeater.IsChecked = !MenuSettingsSemaphoreTypeNormalSemaphore.IsChecked;
+            MenuSettingsSemaphoreTypeSblSemaphore.IsChecked = !MenuSettingsSemaphoreTypeNormalSemaphore.IsChecked;
+            MenuSettingsSemaphoreTypeManeuverShield.IsChecked = !MenuSettingsSemaphoreTypeNormalSemaphore.IsChecked;
+            MenuSettingsSemaphoreTypeWarningShield.IsChecked = !MenuSettingsSemaphoreTypeNormalSemaphore.IsChecked;
+        }
+
+        private void MenuSettingsSemaphoreTypeManeuverShield_Click(object sender, RoutedEventArgs e)
+        {
+            MenuSettingsSemaphoreTypeManeuverShield.IsChecked = MenuSettingsSemaphoreTypeManeuverShield.IsChecked;
+            MenuSettingsSemaphoreTypeRepeater.IsChecked = !MenuSettingsSemaphoreTypeManeuverShield.IsChecked;
+            MenuSettingsSemaphoreTypeNormalSemaphore.IsChecked = !MenuSettingsSemaphoreTypeManeuverShield.IsChecked;
+            MenuSettingsSemaphoreTypeSblSemaphore.IsChecked = !MenuSettingsSemaphoreTypeManeuverShield.IsChecked;
+            MenuSettingsSemaphoreTypeWarningShield.IsChecked = !MenuSettingsSemaphoreTypeManeuverShield.IsChecked;
+        }
+
+        private void MenuSettingsSemaphoreTypeWarningShield_Click(object sender, RoutedEventArgs e)
+        {
+            MenuSettingsSemaphoreTypeWarningShield.IsChecked = MenuSettingsSemaphoreTypeWarningShield.IsChecked;
+            MenuSettingsSemaphoreTypeRepeater.IsChecked = !MenuSettingsSemaphoreTypeWarningShield.IsChecked;
+            MenuSettingsSemaphoreTypeNormalSemaphore.IsChecked = !MenuSettingsSemaphoreTypeWarningShield.IsChecked;
+            MenuSettingsSemaphoreTypeManeuverShield.IsChecked = !MenuSettingsSemaphoreTypeWarningShield.IsChecked;
+            MenuSettingsSemaphoreTypeSblSemaphore.IsChecked = !MenuSettingsSemaphoreTypeWarningShield.IsChecked;
+        }
+
         private void MenuFileOpen_Click(object sender, RoutedEventArgs e)
         {
 

@@ -26,6 +26,13 @@
     <system:String x:Key="MenuSettingCodeDestination">Miejsce generowania</system:String>
     <system:String x:Key="MenuSettingCodeDestinationEditor">Edytor</system:String>
     <system:String x:Key="MenuSettingCodeDestinationFile">Plik</system:String>
+    <!-- Menu Setting Semaphore Type-->
+    <system:String x:Key="MenuSettingSemaphoreType">Typ semafora</system:String>
+    <system:String x:Key="MenuSettingSemaphoreTypeWarning">Tarcza ostrzegawcza</system:String>
+    <system:String x:Key="MenuSettingSemaphoreTypeManeuver">Tarcza manewrowa</system:String>
+    <system:String x:Key="MenuSettingSemaphoreTypeSemaphore">Semafor</system:String>
+    <system:String x:Key="MenuSettingSemaphoreTypeRepeater">Powtarzacz</system:String>
+    <system:String x:Key="MenuSettingSemaphoreTypeSblSemaphore">Semafor SBL</system:String>
     <!--Menu About-->
     <system:String x:Key="MenuAbout">O programie</system:String>
     <system:String x:Key="MenuAboutHelp">Pomoc</system:String>

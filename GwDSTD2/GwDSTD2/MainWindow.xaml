@@ -4,17 +4,16 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:gwDstd2="clr-namespace:GwDSTD2"
-        mc:Ignorable="d" Height="480" Width="750" ResizeMode="NoResize" Title="{DynamicResource MainWindowTitle}">
+        mc:Ignorable="d" Height="440" Width="750" ResizeMode="NoResize" Title="{DynamicResource MainWindowTitle}">
 
     <Grid Background="{DynamicResource {x:Static SystemColors.InfoBrushKey}}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="69*"/>
-            <RowDefinition Height="377*"/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="124*"/>
-            <ColumnDefinition Width="123*"/>
             <ColumnDefinition Width="125*"/>
+            <ColumnDefinition Width="125*"/>
+            <ColumnDefinition Width="122*"/>
         </Grid.ColumnDefinitions>
         <Menu x:Name="MainMenu" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="744" IsMainMenu="True" Grid.ColumnSpan="3">
             <MenuItem x:Name="MenuFile" Header="{DynamicResource MenuFile}" Height="30" >
@@ -45,6 +44,17 @@
                     <MenuItem x:Name="MenuSettingsCodeDestinationEditor" Header="{DynamicResource MenuSettingCodeDestinationEditor}" HorizontalAlignment="Left" Width="140" IsCheckable="True" IsChecked="True" Click="MenuSettingsCodeDestinationEditor_Click"/>
                     <MenuItem x:Name="MenuSettingsCodeDestinationFile" Header="{DynamicResource MenuSettingCodeDestinationFile}" HorizontalAlignment="Left" Width="140" IsCheckable="True" IsChecked="False" Click="MenuSettingsCodeDestinationFile_Click"/>
                 </MenuItem>
+                <MenuItem x:Name="MenuSettingsSemaphoreType" Header="{DynamicResource MenuSettingSemaphoreType}" HorizontalAlignment="Left" Width="200">
+                    <MenuItem x:Name="MenuSettingsSemaphoreTypeWarningShield" Header="{DynamicResource MenuSettingSemaphoreTypeWarning}" HorizontalAlignment="Left" Width="200" IsCheckable="True" Click="MenuSettingsSemaphoreTypeWarningShield_Click">
+                        <MenuItem.ItemBindingGroup>
+                            <BindingGroup Name="MenuSettingsSemaphoreType"/>
+                        </MenuItem.ItemBindingGroup>
+                    </MenuItem>
+                    <MenuItem x:Name="MenuSettingsSemaphoreTypeManeuverShield" Header="{DynamicResource MenuSettingSemaphoreTypeManeuver}" HorizontalAlignment="Left" Width="200" IsCheckable="True" Click="MenuSettingsSemaphoreTypeManeuverShield_Click"/>
+                    <MenuItem x:Name="MenuSettingsSemaphoreTypeNormalSemaphore" Header="{DynamicResource MenuSettingSemaphoreTypeSemaphore}" HorizontalAlignment="Left" Width="200" IsChecked="True" IsCheckable="True" Click="MenuSettingsSemaphoreTypeNormalSemaphore_Click"/>
+                    <MenuItem x:Name="MenuSettingsSemaphoreTypeRepeater" Header="{DynamicResource MenuSettingSemaphoreTypeRepeater}" HorizontalAlignment="Left" Width="200" IsCheckable="True" Click="MenuSettingsSemaphoreTypeRepeater_Click"/>
+                    <MenuItem x:Name="MenuSettingsSemaphoreTypeSblSemaphore" Header="{DynamicResource MenuSettingSemaphoreTypeSblSemaphore}" HorizontalAlignment="Left" Width="200" IsCheckable="True" Click="MenuSettingsSemaphoreTypeSblSemaphore_Click"/>
+                </MenuItem>
             </MenuItem>
             <MenuItem x:Name="MenuAbout" Header="{DynamicResource MenuAbout}">
                 <MenuItem x:Name="Help" Header="{DynamicResource MenuAboutHelp}" HorizontalAlignment="Left" Width="140" Click="Help_Click"/>
@@ -53,9 +63,7 @@
             </MenuItem>
             <MenuItem x:Name="MenuDebug" Header="Debug" Click="MenuDebug_Click"/>
         </Menu>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="120,39,0,0" VerticalAlignment="Top" Width="120" Height="22"/>
-        <Label x:Name="label" Content="Typ semafora" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Height="26" Width="81"/>
-        <GroupBox x:Name="groupBox" Header="Kolejność powtarzacza" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="-0.113,-0.87" Height="87" Width="230">
+        <GroupBox x:Name="groupBox" Header="Kolejność powtarzacza" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.113,-0.87" Height="87" Width="230">
             <StackPanel Margin="10,10,8,7" Orientation="Vertical">
                 <RadioButton x:Name="radioButton" Content="ISp" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                 <RadioButton x:Name="radioButton1" Content="IISp" HorizontalAlignment="Left" VerticalAlignment="Top"/>
@@ -63,14 +71,14 @@
 
             </StackPanel>
         </GroupBox>
-        <GroupBox x:Name="groupBox_Copy" Header="Odchylenie słupa" HorizontalAlignment="Left" Margin="10,102,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="-0.113,-0.87" Height="87" Width="230">
+        <GroupBox x:Name="groupBox_Copy" Header="Odchylenie słupa" HorizontalAlignment="Left" Margin="10,127,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.113,-0.87" Height="87" Width="230">
             <StackPanel Margin="10,10,8,7" Orientation="Vertical">
                 <RadioButton x:Name="radioButton3" Content="Odchył w lewo" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                 <RadioButton x:Name="radioButton4" Content="Prosty" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                 <RadioButton x:Name="radioButton5" Content="Odchył w prawo" HorizontalAlignment="Left" VerticalAlignment="Top"/>
             </StackPanel>
         </GroupBox>
-        <GroupBox x:Name="groupBox_Copy1" Header="Wskaźniki" HorizontalAlignment="Left" Margin="10,194,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="-0.113,-0.87" Height="93" Width="230">
+        <GroupBox x:Name="groupBox_Copy1" Header="Wskaźniki" HorizontalAlignment="Left" Margin="10,219,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.113,-0.87" Height="93" Width="230">
             <WrapPanel Margin="10,10,20,7">
                 <CheckBox x:Name="checkBox" Content="W1" Margin="6"/>
                 <CheckBox x:Name="checkBox_Copy" Content="W18" Margin="6"/>
@@ -79,13 +87,13 @@
                 <CheckBox x:Name="checkBox_Copy3" Content="W24" Margin="6"/>
             </WrapPanel>
         </GroupBox>
-        <GroupBox x:Name="groupBox_Copy2" Header="Opcje dodatkowe" HorizontalAlignment="Left" Margin="10,292,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="-0.113,-0.87" Height="73" Width="230">
+        <GroupBox x:Name="groupBox_Copy2" Header="Opcje dodatkowe" HorizontalAlignment="Left" Margin="10,317,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.113,-0.87" Height="73" Width="230">
             <WrapPanel Margin="10,10,8,7" Orientation="Vertical">
                 <CheckBox x:Name="checkBox2" Content="Karzełkowy" Margin="6"/>
                 <CheckBox x:Name="checkBo4" Content="Unieważniony" Margin="6"/>
             </WrapPanel>
         </GroupBox>
-        <GroupBox x:Name="groupBox_Copy3" Header="Komory" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="-0.113,-0.87" Height="179" Width="230" Grid.Column="1">
+        <GroupBox x:Name="groupBox_Copy3" Header="Komory" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.113,-0.87" Height="179" Width="230" Grid.Column="1">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="41*"/>
@@ -109,36 +117,74 @@
                     <ComboBoxItem Content="(Brak)" IsSelected="True"/>
                     <ComboBoxItem Content="Niebieskie"/>
                     <ComboBoxItem Content="Zielone"/>
-                    <ComboBoxItem Content="Pomarańczowe"/>
-                    <ComboBoxItem Content="Pomarańczowe"/>
+                    <ComboBoxItem Content="Pomarańczowe (odn. do nast. sem.)"/>
+                    <ComboBoxItem Content="Pomarańczowe (ogr prędkości)"/>
                     <ComboBoxItem Content="Czerwone"/>
                     <ComboBoxItem Content="Białe"/>
                 </ComboBox>
-                <ComboBox x:Name="comboBox1_Copy1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="136" Height="26" Grid.Row="5"/>
-                <ComboBox x:Name="comboBox1_Copy2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="136" Height="26" Grid.Row="4"/>
-                <ComboBox x:Name="comboBox1_Copy3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="136" Height="26" Grid.Row="3"/>
-                <ComboBox x:Name="comboBox1_Copy4" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="136" Height="26" Grid.Row="2"/>
-                <ComboBox x:Name="comboBox1_Copy5" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="136" Height="26" Grid.Row="1"/>
+                <ComboBox x:Name="comboBox1_Copy1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="136" Height="26" Grid.Row="5">
+                    <ComboBoxItem Content="(Brak)" IsSelected="True"/>
+                    <ComboBoxItem Content="Niebieskie"/>
+                    <ComboBoxItem Content="Zielone"/>
+                    <ComboBoxItem Content="Pomarańczowe (odn. do nast. sem.)"/>
+                    <ComboBoxItem Content="Pomarańczowe (ogr prędkości)"/>
+                    <ComboBoxItem Content="Czerwone"/>
+                    <ComboBoxItem Content="Białe"/>
+                </ComboBox>
+                <ComboBox x:Name="comboBox1_Copy2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="136" Height="26" Grid.Row="4">
+                    <ComboBoxItem Content="(Brak)" IsSelected="True"/>
+                    <ComboBoxItem Content="Niebieskie"/>
+                    <ComboBoxItem Content="Zielone"/>
+                    <ComboBoxItem Content="Pomarańczowe (odn. do nast. sem.)"/>
+                    <ComboBoxItem Content="Pomarańczowe (ogr prędkości)"/>
+                    <ComboBoxItem Content="Czerwone"/>
+                    <ComboBoxItem Content="Białe"/>
+                </ComboBox>
+                <ComboBox x:Name="comboBox1_Copy3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="136" Height="26" Grid.Row="3">
+                    <ComboBoxItem Content="(Brak)" IsSelected="True"/>
+                    <ComboBoxItem Content="Niebieskie"/>
+                    <ComboBoxItem Content="Zielone"/>
+                    <ComboBoxItem Content="Pomarańczowe (odn. do nast. sem.)"/>
+                    <ComboBoxItem Content="Pomarańczowe (ogr prędkości)"/>
+                    <ComboBoxItem Content="Czerwone"/>
+                    <ComboBoxItem Content="Białe"/>
+                </ComboBox>
+                <ComboBox x:Name="comboBox1_Copy4" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="136" Height="26" Grid.Row="2">
+                    <ComboBoxItem Content="(Brak)" IsSelected="True"/>
+                    <ComboBoxItem Content="Niebieskie"/>
+                    <ComboBoxItem Content="Zielone"/>
+                    <ComboBoxItem Content="Pomarańczowe (odn. do nast. sem.)"/>
+                    <ComboBoxItem Content="Pomarańczowe (ogr prędkości)"/>
+                    <ComboBoxItem Content="Czerwone"/>
+                    <ComboBoxItem Content="Białe"/>
+                </ComboBox>
+                <ComboBox x:Name="comboBox1_Copy5" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="136" Height="26" Grid.Row="1">
+                    <ComboBoxItem Content="(Brak)" IsSelected="True"/>
+                    <ComboBoxItem Content="Pomarańczowy"/>
+                    <ComboBoxItem Content="Zielony"/>
+                </ComboBox>
 
             </Grid>
         </GroupBox>
-        <GroupBox x:Name="groupBox_Copy5" Header="Prędkość na tym semaforze" HorizontalAlignment="Left" Margin="10,194,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="-0.113,-0.87" Height="74" Width="230" Grid.Column="1">
+        <GroupBox x:Name="groupBox_Copy5" Header="Prędkość na tym semaforze" HorizontalAlignment="Left" Margin="10,219,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.113,-0.87" Height="74" Width="230" Grid.Column="1">
             <WrapPanel Margin="10,10,8,7">
                 <CheckBox x:Name="checkBox1" Content="40" Margin="6"/>
                 <CheckBox x:Name="checkBox9" Content="60" Margin="6"/>
                 <CheckBox x:Name="checkBox34" Content="100" Margin="6"/>
             </WrapPanel>
         </GroupBox>
-        <GroupBox x:Name="groupBox_Copy6" Header="Prędkość na następnym semaforze" HorizontalAlignment="Left" Margin="10,273,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="-0.113,-0.87" Height="92" Width="230" Grid.Column="1">
+        <GroupBox x:Name="groupBox_Copy6" Header="Prędkość na następnym semaforze" HorizontalAlignment="Left" Margin="10,298,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.113,-0.87" Height="92" Width="230" Grid.Column="1">
             <WrapPanel Margin="10,10,8,7">
                 <CheckBox x:Name="checkBox12" Content="40/60" Margin="6"/>
                 <CheckBox x:Name="checkBox242" Content="100/Vmax" Margin="6"/>
                 <CheckBox x:Name="checkBox124" Content="Komora biała" Margin="6"/>
             </WrapPanel>
         </GroupBox>
-        <GroupBox x:Name="groupBox_Copy8" Header="Podgląd" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="-0.113,-0.87" Height="179" Width="230" Grid.Column="2"/>
-        <Button x:Name="button" Content="Generuj" Grid.Column="2" HorizontalAlignment="Left" Margin="10,241,0,0" Grid.Row="1" VerticalAlignment="Top" Width="230" Height="35"/>
-        <TextBox x:Name="textBox" Grid.Column="2" HorizontalAlignment="Left" Height="35" Margin="10,201,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="230"/>
+        <GroupBox x:Name="groupBox_Copy8" Header="Podgląd" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.113,-0.87" Height="195" Width="224" Grid.Column="2"/>
+        <Button x:Name="button" Content="Generuj" Grid.Column="2" HorizontalAlignment="Left" Margin="10,275,0,0" VerticalAlignment="Top" Width="224" Height="35"/>
+        <TextBox x:Name="textBox" Grid.Column="2" HorizontalAlignment="Left" Height="35" Margin="10,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224"/>
+        <Button x:Name="button_Copy" Content="Konfiguruj" Grid.Column="2" HorizontalAlignment="Left" Margin="10,355,0,0" VerticalAlignment="Top" Width="224" Height="35"/>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="35" Margin="10,315,0,0" VerticalAlignment="Top" Width="224" Grid.Column="2"/>
 
     </Grid>
 </Window>

@@ -26,6 +26,13 @@
     <system:String x:Key="MenuSettingCodeDestination">Generating place</system:String>
     <system:String x:Key="MenuSettingCodeDestinationEditor">Editor</system:String>
     <system:String x:Key="MenuSettingCodeDestinationFile">File</system:String>
+    <!-- Menu Setting Semaphore Type-->
+    <system:String x:Key="MenuSettingSemaphoreType">Semaphore type</system:String>
+    <system:String x:Key="MenuSettingSemaphoreTypeWarning">Warning shield</system:String>
+    <system:String x:Key="MenuSettingSemaphoreTypeManeuver">Maneuver shield</system:String>
+    <system:String x:Key="MenuSettingSemaphoreTypeSemaphore">Normal semaphore</system:String>
+    <system:String x:Key="MenuSettingSemaphoreTypeRepeater">Repeater</system:String>
+    <system:String x:Key="MenuSettingSemaphoreTypeSblSemaphore">SBL Semaphor</system:String>
     <!--Menu About-->
     <system:String x:Key="MenuAbout">About program</system:String>
     <system:String x:Key="MenuAboutHelp">Help</system:String>
