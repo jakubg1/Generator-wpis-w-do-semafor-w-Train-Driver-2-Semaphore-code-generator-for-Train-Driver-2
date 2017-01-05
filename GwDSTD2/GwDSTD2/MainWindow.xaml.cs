@@ -190,17 +190,17 @@ namespace GwDSTD2
 
         private void Help_Click(object sender, RoutedEventArgs e)
         {
-
+            MessageBox.Show("Help...");
         }
 
         private void MenuAboutAuthors_Click(object sender, RoutedEventArgs e)
         {
-
+            MessageBox.Show("About...");
         }
 
         private void MenuAboutVersion_Click(object sender, RoutedEventArgs e)
         {
-
+            MessageBox.Show("Version...");
         }
 
         #endregion
