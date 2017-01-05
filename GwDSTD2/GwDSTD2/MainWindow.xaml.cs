@@ -23,7 +23,78 @@ namespace GwDSTD2
     public partial class MainWindow : Window
     {
 
-        #region variables
+        #region counters and variables
+
+        // wpisywanie wartości
+        private string debug;
+
+        // typ semafora
+        // 0 - semafor
+        // 1 - tarcza ostrzegawcza
+        // 2 - powtarzacz
+        // 3 - tarcza manewrowa
+        // 4 - semafor SBL
+        private int typsemafora;
+
+        // kolejność powtarzacza
+        // 0 - ISp
+        // 1 - IISp
+        // 2 - IIISp
+        private int kolejnoscpowtarzacza;
+
+        // odchylenie semafora
+        // -1 - semafor karzełkowy
+        // 0 - lewo
+        // 1 - prosto
+        // 2 - prawo
+        private int odchylsemafora;
+
+        // miejsce wstawienia kodu
+        // 0 - notatnik
+        // 1 - edytor
+        private int wst;
+
+        // wskaźniki
+        private bool w1;
+        private bool w18;
+        private bool w19;
+        private bool w20;
+        private bool w24;
+
+        // opcje dodatkowe
+        private bool uniew;
+
+        // pasy
+        private bool ppom;
+        private bool pziel;
+
+        // komory
+        // 0 - brak
+        // 1 - niebieska
+        // 2 - zielona
+        // 3 - pomarańczowa - odn. do n. sem.
+        // 4 - pomarańczowa - ograniczenie prędkości
+        // 5 - czerwona
+        // 6 - biała
+        private int komora1;
+        private int komora2;
+        private int komora3;
+        private int komora4;
+        private int komora5;
+
+        // ilość komór
+        private int ilosckomor;
+
+        //predkosci na semaforach
+        private bool predkosc40;
+        private bool predkosc60;
+        private bool predkosc100;
+        private bool predkosc40na60;
+        private bool predkosc100naVmax;
+        private bool komoraBiala;
+
+        // zmienna przechowująca kod
+        private string kod;
 
         #endregion
 
@@ -31,6 +102,32 @@ namespace GwDSTD2
 
         public MainWindow()
         {
+
+            typsemafora = 0;
+            kolejnoscpowtarzacza = 0;
+            odchylsemafora = 0;
+            wst = 0;
+            w1 = false;
+            w18 = false;
+            w19 = false;
+            w20 = false;
+            w24 = false;
+            uniew = false;
+            ppom = false;
+            pziel = false;
+            komora1 = 0;
+            komora2 = 0;
+            komora3 = 0;
+            komora4 = 0;
+            komora5 = 0;
+            predkosc40 = false;
+            predkosc60 = false;
+            predkosc100 = false;
+            predkosc40na60 = false;
+            predkosc100naVmax = false;
+            komoraBiala = false;
+            kod = "";
+
             InitializeComponent();
             LoadUserSettings();
             Closing += OnClosing;
@@ -130,6 +227,8 @@ namespace GwDSTD2
             MenuSettingsSemaphoreTypeNormalSemaphore.IsChecked = !MenuSettingsSemaphoreTypeSblSemaphore.IsChecked;
             MenuSettingsSemaphoreTypeManeuverShield.IsChecked = !MenuSettingsSemaphoreTypeSblSemaphore.IsChecked;
             MenuSettingsSemaphoreTypeWarningShield.IsChecked = !MenuSettingsSemaphoreTypeSblSemaphore.IsChecked;
+
+            typsemafora = 0;
         }
 
         private void MenuSettingsSemaphoreTypeRepeater_Click(object sender, RoutedEventArgs e)
@@ -139,6 +238,8 @@ namespace GwDSTD2
             MenuSettingsSemaphoreTypeNormalSemaphore.IsChecked = !MenuSettingsSemaphoreTypeRepeater.IsChecked;
             MenuSettingsSemaphoreTypeManeuverShield.IsChecked = !MenuSettingsSemaphoreTypeRepeater.IsChecked;
             MenuSettingsSemaphoreTypeWarningShield.IsChecked = !MenuSettingsSemaphoreTypeRepeater.IsChecked;
+
+            typsemafora = 1;
         }
 
         private void MenuSettingsSemaphoreTypeNormalSemaphore_Click(object sender, RoutedEventArgs e)
@@ -148,6 +249,8 @@ namespace GwDSTD2
             MenuSettingsSemaphoreTypeSblSemaphore.IsChecked = !MenuSettingsSemaphoreTypeNormalSemaphore.IsChecked;
             MenuSettingsSemaphoreTypeManeuverShield.IsChecked = !MenuSettingsSemaphoreTypeNormalSemaphore.IsChecked;
             MenuSettingsSemaphoreTypeWarningShield.IsChecked = !MenuSettingsSemaphoreTypeNormalSemaphore.IsChecked;
+
+            typsemafora = 2;
         }
 
         private void MenuSettingsSemaphoreTypeManeuverShield_Click(object sender, RoutedEventArgs e)
@@ -157,6 +260,8 @@ namespace GwDSTD2
             MenuSettingsSemaphoreTypeNormalSemaphore.IsChecked = !MenuSettingsSemaphoreTypeManeuverShield.IsChecked;
             MenuSettingsSemaphoreTypeSblSemaphore.IsChecked = !MenuSettingsSemaphoreTypeManeuverShield.IsChecked;
             MenuSettingsSemaphoreTypeWarningShield.IsChecked = !MenuSettingsSemaphoreTypeManeuverShield.IsChecked;
+
+            typsemafora = 3;
         }
 
         private void MenuSettingsSemaphoreTypeWarningShield_Click(object sender, RoutedEventArgs e)
@@ -166,6 +271,8 @@ namespace GwDSTD2
             MenuSettingsSemaphoreTypeNormalSemaphore.IsChecked = !MenuSettingsSemaphoreTypeWarningShield.IsChecked;
             MenuSettingsSemaphoreTypeManeuverShield.IsChecked = !MenuSettingsSemaphoreTypeWarningShield.IsChecked;
             MenuSettingsSemaphoreTypeSblSemaphore.IsChecked = !MenuSettingsSemaphoreTypeWarningShield.IsChecked;
+
+            typsemafora = 4;
         }
 
         private void MenuFileOpen_Click(object sender, RoutedEventArgs e)
